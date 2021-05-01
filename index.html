@@ -10,8 +10,8 @@
         <link rel="stylesheet" href="styles.css">
         <!-- Use Google Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@600&display=swap" rel="stylesheet">
-        
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap" rel="stylesheet">
+                        
         <title>
             Portfolio Page
         </title>
@@ -23,7 +23,7 @@
 
         <div id="intro-page-div" class="page-div">
             <div id="intro-page-content">
-                <img height="300" width="300" id="intro-page-img" src="https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="intro">
+                <div id="color-circle"></div>
                 <h1 id="title-name">Paul C</h1>
             </div>
             <div id="animated-nav-bar">
@@ -40,20 +40,50 @@
                 </div>
             </div>
             <div id="to-do-list" class="project-tile">
-                <img class="project-image" id="to-do-list-img" alt="to-do-list" height="70%" width="30%" src="https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
+                <h4 class="project-title">To-Do List</h4>
+                <h6 class="project-subtitle">HTML | CSS | JavaScript</h6>
+                <img class="project-image" id="to-do-list-img" alt="to-do-list" height="70%" width="30%" src="to-do-list-img.jpg">
                 <div class="project-info" id="to-do-list-info">
-                    Dolor dolor veniam aute culpa fugiat qui excepteur voluptate exercitation dolor ea elit consectetur labore. Commodo ullamco ipsum aliquip reprehenderit anim dolore aute dolore sint Lorem. Cupidatat eu ad esse ipsum labore aliquip reprehenderit exercitation id incididunt aliquip.                </div>
+                    A simple To-Do List application. 
+                    <br><br> 
+                    I picked this project to practice creating elements and deleting them from the DOM and to practice using CSS animations. 
+                    <br><br>
+                    Some challenges I faced were trying to fix an abrupt transition with the 'Show Customization Panel' label after the mouse had left 
+                    the specificied hover area.  Instead of using <code>:hover</code> I decided to add an event listener that would track <code>mouseenter</code>
+                    and <code>mouseleave</code>.  
+                    <br><br>
+                    I have plans to expand this application to allow the user to save their items on a local database before closing the application.
+                </div>
             </div>
             <div id="user-info-from-api" class="project-tile">
-                <img class="project-image" id="user-info-from-api-img" alt="user-info-from-api" height="70%" width="30%" src="https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
+                <h4 class="project-title">User Info from API</h4>
+                <h6 class="project-subtitle">HTML | CSS | JavaScript | React</h6>
+                <img class="project-image" id="user-info-from-api-img" alt="user-info-from-api" height="70%" width="30%" src="user-info-img.jpg">
                 <div class="project-info" id="user-info-from-api-info">
-                    Mollit aliqua quis cillum nisi Lorem voluptate ipsum mollit veniam aute. Sunt sit aliqua tempor amet dolor elit aliqua est anim aliquip veniam id. Ut nostrud excepteur tempor aliqua reprehenderit cillum enim laborum. Lorem deserunt duis velit qui. Cillum eiusmod nulla amet pariatur dolor officia aliqua. Amet ullamco Lorem irure eu nisi dolor fugiat sint labore elit ipsum ad sunt incididunt. Nostrud sit dolor excepteur irure ut consequat culpa duis Lorem ullamco.
+                    A tool to access User Information from the free, open source api "randomuser.me", built with React.
+                    <br><br>
+                    This project allowed me to focus on two new skills: using React to build an application and to access information from an API using fetch GET.
+                    <br><br>
+                    Initially I found it difficult to navigate through the JSON file provided by the API to access the specific information I needed.
+                    <br><br>
+                    I also found it challenging to include a right margin on the last column of information cards that would appear.  I discovered this was due
+                    to <code>flex: wrap</code> ignoring the padding and margin of the elements, so the easiest way around this was to create a pseudoelement after
+                    the last cards on the right.
                 </div>
             </div>
             <div id="domain-api-tool" class="project-tile">
-                <img class="project-image" id="domain-api-tool-img" alt="domain-api-tool" height="70%" width="30%" src="https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260">
+                <h4 class="project-title">Domain API Tool</h4>
+                <h6 class="project-subtitle">HTML | CSS | JavaScript</h6>
+                <img class="project-image" id="domain-api-tool-img" alt="domain-api-tool" height="70%" width="30%" src="domain-api-tool-img.jpg">
                 <div class="project-info" id="domain-api-tool-info">
-                    Cupidatat tempor quis dolor consequat nisi est nulla amet mollit ad. Culpa qui eiusmod nisi exercitation dolor tempor reprehenderit ipsum esse eiusmod eu nostrud commodo. Sit ipsum sit duis nostrud veniam officia ad id duis ad cupidatat esse ex eu. Nisi fugiat anim adipisicing aliquip amet duis consequat. Sint dolor excepteur non id culpa veniam dolore. Aliquip consequat labore labore pariatur veniam veniam tempor nulla irure cillum ipsum.
+                    A tool to search for properties in Australia using the Domain Group API.
+                    <br><br>
+                    After some experience in API use with my previous project I found this API much more difficult to navigate - I needed
+                    to learn how to use fetch POST requests and the documentation was not as clear.
+                    <br><br>
+                    I had considered building this with React however I wanted to try first to build it with vanilla JavaScript and then to rebuild it
+                    with React at a later date to practice how to convert projects between the two and to appreciate the benefits of the modularity of React when building a
+                    larger JavaScript application. 
                 </div>
             </div>
 
@@ -62,8 +92,8 @@
         <div id="last-page-div" class="page-div">
             <h3 id="title-contact-me">Contact me</h3>
             <ul id="contact-me-list">
-                <li><i class="fab fa-github-square fa-4x"></i></i></li>
-                <li><i class="fab fa-twitter-square fa-4x"></i></li>
+                <li><a href="https://github.com/pcon92" target="__blank" class="contact-me-links"><i class="fab fa-github-square fa-4x"></i></i></a></li>
+                <li><a href="#last-page-div" class="contact-me-links" onclick=alertTwitter()><i class="fab fa-twitter-square fa-4x"></i></a></li>
             </ul>
         </div>
 
