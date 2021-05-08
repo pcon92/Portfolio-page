@@ -8,7 +8,7 @@
 /* Set color variables */
 
 :root {
-    --off-white: rgba(255, 255, 255, 0.1);
+    --off-white: rgb(245, 245, 245);
     --font: 'Dosis', sans-serif;
 }
 
@@ -17,6 +17,7 @@
 
 body {
     height: 300vh;
+    background-color: var(--off-white);
 }
 
 #intro-page-content {
@@ -30,6 +31,14 @@ body {
 #color-circle {
     border-radius: 50%;
     border: 3px solid white;
+    height: 20rem;
+    width: 20rem;
+    background-color: white;
+}
+
+#color-circle-2 {
+    border-radius: 50%;
+    border: 3px solid black;
     height: 20rem;
     width: 20rem;
     background-color: white;
@@ -102,6 +111,10 @@ body {
             margin: 0.5rem;
         }
 
+        #project-tile-intro {
+            background-color: var(--off-white);
+        }
+
         #project-tile-intro-info {
             font-size: 5rem;
             font-family: var(--font);
@@ -143,7 +156,7 @@ body {
             }
 
             #user-info-from-api {
-                background-color: white;
+                background-color: var(--off-white);
             }
 
             #domain-api-tool {
@@ -160,6 +173,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    background-color: var(--off-white);
 }
 
 #title-contact-me {
@@ -198,7 +213,7 @@ i:hover {
 
 @media (max-width: 20rem) { /* 320 pixels */
    
-    #color-circle {
+    #color-circle, #color-circle-2 {
         transform: scale(.60);
     }
     
@@ -253,7 +268,7 @@ i:hover {
 
 @media (min-width: 20rem) { /* 320 pixels */
     
-    #color-circle {
+    #color-circle, #color-circle-2 {
         transform: scale(.70);
     }
 
@@ -309,7 +324,7 @@ i:hover {
 
 @media (min-width: 40rem) { /* 640 pixels */
 
-    #color-circle {
+    #color-circle, #color-circle-2 {
         transform: scale(1);
     }
 
