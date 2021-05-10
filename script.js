@@ -9,18 +9,21 @@ function randomColorGenerator() {
     let rgb1 = Math.floor(256*Math.random()-1);
     let rgb2 = Math.floor(256*Math.random()-1);
     let rgb3 = Math.floor(256*Math.random()-1);
-    let randomColor = `rgb(${rgb1}, ${rgb2}, ${rgb3})`;
+    let alpha = Math.random().toFixed(1);
+    let randomColor = `rgba(${rgb1}, ${rgb2}, ${rgb3}, ${alpha})`;
+    console.log(randomColor);
     document.getElementById("color-circle").style.backgroundColor = randomColor;
     document.getElementById("color-circle-2").style.backgroundColor = randomColor;
 }
-gsap.to("#color-circle", {duration: 1, repeat: -1, onRepeat: randomColorGenerator});
 
-
+// GSAP animations //
 
 let tl1 = gsap.timeline();
 tl1.from("#to-do-list", {xPercent: -100})
     .from("#user-info-from-api", {xPercent: 100})
     .from("#domain-api-tool", {xPercent: -100})
+
+gsap.to("#color-circle", {duration: 1, repeat: -1, onRepeat: randomColorGenerator});
 
 gsap.from("#color-circle", {opacity: 0, scale: 0.1, duration: 1.5});
 
@@ -62,9 +65,8 @@ ScrollTrigger.create({
     anticipatePin: 1
 })
 
-
 function alertTwitter() {
-    alert('Twitter account coming in the future, for now please contact me through GitHub');
+    alert('Twitter account coming in the future');
 }
 
 /* 
