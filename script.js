@@ -1,8 +1,13 @@
-// To allow proper animation distances on any device width
+// To allow proper animation distances on any device width - recalculate on window resize
 let navLeftDist = (document.documentElement.clientWidth / 2) - (document.getElementById("animated-nav-bar").offsetWidth / 2);
 let circleRightDist = (document.documentElement.clientWidth / 2) + (document.getElementById("animated-nav-bar").offsetWidth / 2);
 let circleLeftDist = (document.documentElement.clientWidth / 2) + (document.getElementById("animated-nav-bar").offsetWidth / 2);
 let contactLinksDist = (document.documentElement.clientHeight / 2) - (document.getElementById("contact-me-list").offsetHeight / 2);
+
+window.addEventListener("resize", () => {
+    location.reload();
+  });
+
 
 // Create and call function for random colors in circles
 function randomColorGenerator() {
@@ -11,13 +16,12 @@ function randomColorGenerator() {
     let rgb3 = Math.floor(256*Math.random()-1);
     let alpha = Math.random().toFixed(1);
     let randomColor = `rgba(${rgb1}, ${rgb2}, ${rgb3}, ${alpha})`;
-    console.log(randomColor);
     document.getElementById("color-circle").style.backgroundColor = randomColor;
     document.getElementById("color-circle-2").style.backgroundColor = randomColor;
 }
 
-// GSAP animations //
 
+// GSAP animations //
 let tl1 = gsap.timeline();
 tl1.from("#to-do-list", {xPercent: -100})
     .from("#user-info-from-api", {xPercent: 100})
@@ -26,6 +30,7 @@ tl1.from("#to-do-list", {xPercent: -100})
 gsap.to("#color-circle", {duration: 1, repeat: -1, onRepeat: randomColorGenerator});
 
 gsap.from("#color-circle", {opacity: 0, scale: 0.1, duration: 1.5});
+gsap.from("#subtitle", {opacity: 0, duration: 1.5, ease: "power3.in"});
 
 gsap.to("#color-circle", 
 {scrollTrigger: 
