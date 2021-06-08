@@ -46,7 +46,7 @@ gsap.to("#animated-nav-bar",
 gsap.to("#animated-nav-bar", 
 {scrollTrigger: 
     {trigger: "#project-section-div", start: "top 35%", end: "+=500%", scrub: true, pin: "#animated-nav-bar", overflow:"hidden"},  
-    zIndex: 10, top: "1px"});
+    zIndex: 10, top: "0px"});
 
 gsap.from("#contact-me-list", 
 {scrollTrigger: 
