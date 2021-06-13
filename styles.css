@@ -158,6 +158,21 @@ body {
             text-align: justify;
         }
 
+            #banking-application {
+                background-color: black;
+                color: white;
+            }
+
+            #banking-application-info {
+                border: 6px solid white;
+                box-shadow: 0px 0px 10px 2px white;
+            }
+
+            #newsapp {
+                background-color: white;
+                color: black;
+            }
+
             #to-do-list {
                 background-color: black;
                 color: white;
