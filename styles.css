@@ -8,7 +8,8 @@
 /* Set color variables */
 
 :root {
-    --off-white: rgb(245, 245, 245);
+    --off-white:  rgb(249, 246, 239);
+    --dark-grey: rgb(20, 20, 20); 
     --font: 'Dosis', sans-serif;
     --font-2: 'Montserrat', sans-serif;
 }
@@ -31,10 +32,10 @@ body {
 
 #color-circle {
     border-radius: 50%;
-    border: 3px solid white;
+    border: 3px solid var(--off-white);
     height: 20rem;
     width: 20rem;
-    background-color: white;
+    background-color: var(--off-white);
 }
 
 #color-circle-2 {
@@ -42,7 +43,7 @@ body {
     border: 3px solid black;
     height: 20rem;
     width: 20rem;
-    background-color: white;
+    background-color: var(--off-white);
 }
 
 #animated-nav-bar {
@@ -51,15 +52,27 @@ body {
     align-items: center;
     width: 20rem;
     height: 2rem;
-    background-color: black;
-    border: 3px solid white;
+    background-color: var(--dark-grey);
+    border: 3px solid var(--off-white);
     border-radius: 20px;
 }
 
-#title-name {
-    margin: 2rem;
+.title-letter {
     font-family: var(--font);
-    font-size: 2rem;
+    font-size: 6rem;
+    text-shadow: 2px -2px 1px teal, -2px 2px 1px red;
+    margin-left: 0.5rem;
+}
+
+
+.last {
+    margin-left: 3rem;
+}
+
+
+#title-name-div {
+    display: flex;
+    margin: 2rem;
 }
 
 #subtitle {
@@ -88,7 +101,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: black;
+        background-color: var(--dark-grey);
         color: white;
         overflow: hidden;
     }
@@ -129,6 +142,7 @@ body {
         #project-tile-intro-info {
             font-size: 5rem;
             font-family: var(--font);
+            opacity: 0;
         }
 
         .project-image {
@@ -159,28 +173,28 @@ body {
         }
 
             #banking-application {
-                background-color: black;
+                background-color: var(--dark-grey);
                 color: white;
             }
 
             #banking-application-info {
-                border: 6px solid white;
-                box-shadow: 0px 0px 10px 2px white;
+                border: 6px solid var(--off-white);
+                box-shadow: 0px 0px 10px 2px var(--off-white);
             }
 
             #newsapp {
-                background-color: white;
+                background-color: var(--off-white);
                 color: black;
             }
 
             #to-do-list {
-                background-color: black;
+                background-color: var(--dark-grey);
                 color: white;
             }
 
             #to-do-list-info {
-                border: 6px solid white;
-                box-shadow: 0px 0px 10px 2px white;
+                border: 6px solid var(--off-white);
+                box-shadow: 0px 0px 10px 2px var(--off-white);
             }
 
             #user-info-from-api {
@@ -188,13 +202,13 @@ body {
             }
 
             #domain-api-tool {
-                background-color: black;
+                background-color: var(--dark-grey);
                 color: white;
             }
 
             #domain-api-tool-info {
-                border: 6px solid white;
-                box-shadow: 0px 0px 10px 2px white;
+                border: 6px solid var(--off-white);
+                box-shadow: 0px 0px 10px 2px var(--off-white);
             }
 
 #last-page-div {
