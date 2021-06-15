@@ -31,6 +31,12 @@ tl1.from("#banking-application", {xPercent: -100})
 
 gsap.to("#color-circle", {duration: 1, repeat: -1, onRepeat: randomColorGenerator});
 
+gsap.to(".title-letter", {transform: "translateX(10px)", 
+    duration: 0.2,
+    repeat: -1,
+    stagger: 0.2, 
+    yoyo: true});
+
 gsap.from("#color-circle", {opacity: 0, scale: 0.1, duration: 1.5});
 gsap.from("#subtitle", {opacity: 0, duration: 1.5, ease: "power3.in"});
 
@@ -82,18 +88,26 @@ function alertTwitter() {
 }
 
 
+
+
+const TITLE_NAME_DIV = document.getElementById("title-name-div");
+
 // for moving title letters
 
-let xdir = "";
-let ydir = "";
+let xDir = "";
+let yDir = "";
 
-let oldX = xdir;
-let oldY = ydir;
+let oldX = xDir;
+let oldY = yDir;
 
 let mouseDir = [];
+let currentMousePos = [];
 
 document.addEventListener('mousemove', (e) => {
     mouseDir = mouseDirection(e.x, e.y)
+    currentMousePos = [e.x, e.y];
+    let modValues = gettingCloser(); // for hover area
+    TITLE_NAME_DIV.style.borderBottom = `2px solid rgba(255, 0, 0, ${1-modValues.reduce((acc, cumul) => acc + cumul)})`;
 });
 
 function mouseDirection(x, y) {
@@ -158,3 +172,19 @@ TITLE_LETTERS[4].addEventListener('mouseover', () => {
     setTimeout(letterGoBack, 300);
 })
 
+
+// for red border under title
+const TITLE_CONTAINER = document.getElementById("title-name-div").getBoundingClientRect();
+
+const TITLE_CONTAINER_CENTER = [TITLE_CONTAINER.x + (TITLE_CONTAINER.width/2), 
+    TITLE_CONTAINER.y + (TITLE_CONTAINER.height/2)];
+
+function gettingCloser() {
+    let closerX = TITLE_CONTAINER_CENTER[0] - currentMousePos[0];
+    let closerY = TITLE_CONTAINER_CENTER[1] - currentMousePos[1];
+    
+    let howClose = [Math.abs(closerX)/1000 , Math.abs(closerY)/500]
+
+    return howClose;
+
+}

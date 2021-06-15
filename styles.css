@@ -64,6 +64,10 @@ body {
     margin-left: 0.5rem;
 }
 
+.title-letter:hover {
+    cursor: default;
+}
+
 
 .last {
     margin-left: 3rem;
@@ -81,6 +85,7 @@ body {
     width: 15rem;
     margin-bottom: 2rem;
     font-family: var(--font-2);
+    text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.6);
 }
 
 .nav-link {
@@ -90,6 +95,10 @@ body {
     font-size: .9rem;
     font-family: var(--font-2);
     font-weight: bolder;
+}
+
+.nav-link:hover {
+    transform: scale(1.05);
 }
 
 .page-div {
@@ -182,9 +191,17 @@ body {
                 box-shadow: 0px 0px 10px 2px var(--off-white);
             }
 
+            #banking-application-img {
+                border: 20px solid var(--off-white);
+            }
+
             #newsapp {
                 background-color: var(--off-white);
                 color: black;
+            }
+
+            #newsapp-img {
+                border: 20px solid var(--dark-grey);
             }
 
             #to-do-list {
@@ -197,13 +214,25 @@ body {
                 box-shadow: 0px 0px 10px 2px var(--off-white);
             }
 
+            #to-do-list-img {
+                border: 20px solid var(--off-white);
+            }
+
             #user-info-from-api {
                 background-color: var(--off-white);
+            }
+
+            #user-info-from-api-img {
+                border: 20px solid var(--dark-grey);
             }
 
             #domain-api-tool {
                 background-color: var(--dark-grey);
                 color: white;
+            }
+
+            #domain-api-tool-img {
+                border: 20px solid var(--off-white);
             }
 
             #domain-api-tool-info {
