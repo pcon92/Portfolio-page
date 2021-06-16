@@ -249,7 +249,8 @@ body {
                 font-size: 4rem;
                 font-family: var(--font);
                 position: absolute;
-                visibility: hidden;
+                opacity: 0;
+                transition: opacity 1.5s;
             }
 
         .subtitle-div {
@@ -265,7 +266,8 @@ body {
             .project-subtitle {
                 font-size: 1rem;
                 position: absolute;
-                visibility: hidden;
+                opacity: 0;
+                transition: opacity 1.5s;
             }
 
         #click-a-side-tip {
@@ -285,7 +287,8 @@ body {
                 color: white;
                 width: inherit;
                 padding: 1rem;
-                visibility: hidden;
+                opacity: 0;
+                transition: opacity 1.5s;
                 height: inherit;
                 text-align: justify;
             }
@@ -533,7 +536,7 @@ body {
 
     .info-div {
         height: 10rem;
-        width: 20rem;
+        width: 18rem;
     }
         
     .project-info {
