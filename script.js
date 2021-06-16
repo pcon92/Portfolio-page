@@ -23,11 +23,7 @@ function randomColorGenerator() {
 
 // GSAP animations //
 let tl1 = gsap.timeline();
-tl1.from("#banking-application", {xPercent: -100})
-    .from("#newsapp", {xPercent: 100})
-    .from("#to-do-list", {xPercent: -100})
-    .from("#user-info-from-api", {xPercent: 100})
-    .from("#domain-api-tool", {xPercent: -100})
+tl1.from("#project-cube-page", {xPercent: -100})
 
 gsap.to("#color-circle", {duration: 1, repeat: -1, onRepeat: randomColorGenerator});
 
@@ -37,7 +33,9 @@ gsap.to(".title-letter", {transform: "translateX(10px)",
     stagger: 0.2, 
     yoyo: true});
 
+
 gsap.from("#color-circle", {opacity: 0, scale: 0.1, duration: 1.5});
+
 gsap.from("#subtitle", {opacity: 0, duration: 1.5, ease: "power3.in"});
 
 gsap.to("#color-circle", 
@@ -45,6 +43,13 @@ gsap.to("#color-circle",
     {trigger: "#project-section-div", start: 0, end: "+=80%", scrub: true}, 
     x: `+=${circleRightDist}`,
 });
+
+gsap.to(".project-cube", 
+{scrollTrigger: 
+    {trigger: "#project-section-div", start: "top", end: "+=150%"},  
+    rotateY: 180,
+    scrub: true
+    });
 
 gsap.to("#animated-nav-bar", 
 {scrollTrigger: 
@@ -54,7 +59,7 @@ gsap.to("#animated-nav-bar",
 gsap.to("#animated-nav-bar", 
 {scrollTrigger: 
     {trigger: "#animated-nav-bar", start: "top top", end: "+=500%", scrub: true, pin: "#animated-nav-bar", overflow:"hidden"},  
-    zIndex: 30, top: "0px"});
+    top: "0px"});
 
 gsap.to("#project-tile-intro-info", 
 {scrollTrigger: 
@@ -77,7 +82,7 @@ ScrollTrigger.create({
     trigger: "#project-section-div",
     start: "top top",
     end: "+=2000",
-    snap: {snapTo: 1/5, delay: 0.25, duration: {min: 0.2, max: 1}},
+    snap: {snapTo: 1, delay: 0.25, duration: {min: 0.2, max: 1}},
     scrub: true,
     pin: true,
     anticipatePin: 1
@@ -186,5 +191,279 @@ function gettingCloser() {
     let howClose = [Math.abs(closerX)/1000 , Math.abs(closerY)/500]
 
     return howClose;
+
+}
+
+
+
+// for project cube
+
+let rotation = 0;
+
+document.getElementById("turn-right").addEventListener('click', () => {
+    rotation += 90;
+    document.getElementById("project-cube").style.transform = `rotateY(${rotation}deg)`;
+});
+document.getElementById("turn-left").addEventListener('click', () => {
+    rotation -= 90;
+    document.getElementById("project-cube").style.transform = `rotateY(${rotation}deg)`;
+});
+document.getElementById("turn-up").addEventListener('click', () => {
+    rotation += 90;
+    document.getElementById("project-cube").style.transform = `rotateX(${rotation}deg)`;
+});
+document.getElementById("turn-down").addEventListener('click', () => {
+    rotation -= 90;
+    document.getElementById("project-cube").style.transform = `rotateX(${rotation}deg)`;
+});
+
+
+const TIP = document.getElementById("click-a-side-tip");
+
+function hideTip() {
+    TIP.style.visibility = "hidden";
+}
+
+function bankingApplication() {
+
+    hideTip();
+
+    const TITLE_DEFAULT = document.getElementById("project-title");
+    TITLE_DEFAULT.style.visibility = "hidden";
+    const SUBTITLE_DEFAULT = document.getElementById("project-subtitle");
+    SUBTITLE_DEFAULT.style.visibility = "hidden";
+    const INFO_DEFAULT = document.getElementById("project-info");
+    INFO_DEFAULT.style.visibility = "hidden";
+
+    const TITLE_BANKING_APPLICATION = document.getElementById("project-title-banking-application");
+    TITLE_BANKING_APPLICATION.style.visibility = "visible";
+    const SUBTITLE_BANKING_APPLICATION = document.getElementById("project-subtitle-banking-application");
+    SUBTITLE_BANKING_APPLICATION.style.visibility = "visible";
+    const INFO_BANKING_APPLICATION = document.getElementById("project-info-banking-application");
+    INFO_BANKING_APPLICATION.style.visibility = "visible";
+
+    const TITLE_NEWS_API_APP = document.getElementById("project-title-newsapi-app");
+    TITLE_NEWS_API_APP.style.visibility = "hidden";
+    const SUBTITLE_NEWS_API_APP = document.getElementById("project-subtitle-newsapi-app");
+    SUBTITLE_NEWS_API_APP.style.visibility = "hidden";
+    const INFO_NEWS_API_APP = document.getElementById("project-info-newsapi-app");
+    INFO_NEWS_API_APP.style.visibility = "hidden";
+
+    const TITLE_TO_DO_LIST = document.getElementById("project-title-to-do-list");
+    TITLE_TO_DO_LIST.style.visibility = "hidden";
+    const SUBTITLE_TO_DO_LIST = document.getElementById("project-subtitle-to-do-list");
+    SUBTITLE_TO_DO_LIST.style.visibility = "hidden";
+    const INFO_TO_DO_LIST = document.getElementById("project-info-to-do-list");
+    INFO_TO_DO_LIST.style.visibility = "hidden";
+
+    const TITLE_USER_INFO_FROM_API = document.getElementById("project-title-user-info-from-api");
+    TITLE_USER_INFO_FROM_API.style.visibility = "hidden";
+    const SUBTITLE_USER_INFO_FROM_API = document.getElementById("project-subtitle-user-info-from-api");
+    SUBTITLE_USER_INFO_FROM_API.style.visibility = "hidden";
+    const INFO_USER_INFO_FROM_API = document.getElementById("project-info-user-info-from-api");
+    INFO_USER_INFO_FROM_API.style.visibility = "hidden";
+
+    const TITLE_DOMAIN_API_TOOL = document.getElementById("project-title-domain-api-tool");
+    TITLE_DOMAIN_API_TOOL.style.visibility = "hidden";
+    const SUBTITLE_DOMAIN_API_TOOL = document.getElementById("project-subtitle-domain-api-tool");
+    SUBTITLE_DOMAIN_API_TOOL.style.visibility = "hidden";
+    const INFO_DOMAIN_API_TOOL = document.getElementById("project-info-domain-api-tool");
+    INFO_DOMAIN_API_TOOL.style.visibility = "hidden";
+
+}
+
+
+function newsapiApp() {
+
+    hideTip();
+
+    const TITLE_DEFAULT = document.getElementById("project-title");
+    TITLE_DEFAULT.style.visibility = "hidden";
+    const SUBTITLE_DEFAULT = document.getElementById("project-subtitle");
+    SUBTITLE_DEFAULT.style.visibility = "hidden";
+    const INFO_DEFAULT = document.getElementById("project-info");
+    INFO_DEFAULT.style.visibility = "hidden";
+
+    const TITLE_BANKING_APPLICATION = document.getElementById("project-title-banking-application");
+    TITLE_BANKING_APPLICATION.style.visibility = "hidden";
+    const SUBTITLE_BANKING_APPLICATION = document.getElementById("project-subtitle-banking-application");
+    SUBTITLE_BANKING_APPLICATION.style.visibility = "hidden";
+    const INFO_BANKING_APPLICATION = document.getElementById("project-info-banking-application");
+    INFO_BANKING_APPLICATION.style.visibility = "hidden";
+
+    const TITLE_NEWS_API_APP = document.getElementById("project-title-newsapi-app");
+    TITLE_NEWS_API_APP.style.visibility = "visible";
+    const SUBTITLE_NEWS_API_APP = document.getElementById("project-subtitle-newsapi-app");
+    SUBTITLE_NEWS_API_APP.style.visibility = "visible";
+    const INFO_NEWS_API_APP = document.getElementById("project-info-newsapi-app");
+    INFO_NEWS_API_APP.style.visibility = "visible";
+
+    const TITLE_TO_DO_LIST = document.getElementById("project-title-to-do-list");
+    TITLE_TO_DO_LIST.style.visibility = "hidden";
+    const SUBTITLE_TO_DO_LIST = document.getElementById("project-subtitle-to-do-list");
+    SUBTITLE_TO_DO_LIST.style.visibility = "hidden";
+    const INFO_TO_DO_LIST = document.getElementById("project-info-to-do-list");
+    INFO_TO_DO_LIST.style.visibility = "hidden";
+
+    const TITLE_USER_INFO_FROM_API = document.getElementById("project-title-user-info-from-api");
+    TITLE_USER_INFO_FROM_API.style.visibility = "hidden";
+    const SUBTITLE_USER_INFO_FROM_API = document.getElementById("project-subtitle-user-info-from-api");
+    SUBTITLE_USER_INFO_FROM_API.style.visibility = "hidden";
+    const INFO_USER_INFO_FROM_API = document.getElementById("project-info-user-info-from-api");
+    INFO_USER_INFO_FROM_API.style.visibility = "hidden";
+
+    const TITLE_DOMAIN_API_TOOL = document.getElementById("project-title-domain-api-tool");
+    TITLE_DOMAIN_API_TOOL.style.visibility = "hidden";
+    const SUBTITLE_DOMAIN_API_TOOL = document.getElementById("project-subtitle-domain-api-tool");
+    SUBTITLE_DOMAIN_API_TOOL.style.visibility = "hidden";
+    const INFO_DOMAIN_API_TOOL = document.getElementById("project-info-domain-api-tool");
+    INFO_DOMAIN_API_TOOL.style.visibility = "hidden";
+
+}
+
+
+function toDoList() {
+    
+    hideTip();
+
+    const TITLE_DEFAULT = document.getElementById("project-title");
+    TITLE_DEFAULT.style.visibility = "hidden";
+    const SUBTITLE_DEFAULT = document.getElementById("project-subtitle");
+    SUBTITLE_DEFAULT.style.visibility = "hidden";
+    const INFO_DEFAULT = document.getElementById("project-info");
+    INFO_DEFAULT.style.visibility = "hidden";
+
+    const TITLE_BANKING_APPLICATION = document.getElementById("project-title-banking-application");
+    TITLE_BANKING_APPLICATION.style.visibility = "hidden";
+    const SUBTITLE_BANKING_APPLICATION = document.getElementById("project-subtitle-banking-application");
+    SUBTITLE_BANKING_APPLICATION.style.visibility = "hidden";
+    const INFO_BANKING_APPLICATION = document.getElementById("project-info-banking-application");
+    INFO_BANKING_APPLICATION.style.visibility = "hidden";
+
+    const TITLE_NEWS_API_APP = document.getElementById("project-title-newsapi-app");
+    TITLE_NEWS_API_APP.style.visibility = "hidden";
+    const SUBTITLE_NEWS_API_APP = document.getElementById("project-subtitle-newsapi-app");
+    SUBTITLE_NEWS_API_APP.style.visibility = "hidden";
+    const INFO_NEWS_API_APP = document.getElementById("project-info-newsapi-app");
+    INFO_NEWS_API_APP.style.visibility = "hidden";
+
+    const TITLE_TO_DO_LIST = document.getElementById("project-title-to-do-list");
+    TITLE_TO_DO_LIST.style.visibility = "visible";
+    const SUBTITLE_TO_DO_LIST = document.getElementById("project-subtitle-to-do-list");
+    SUBTITLE_TO_DO_LIST.style.visibility = "visible";
+    const INFO_TO_DO_LIST = document.getElementById("project-info-to-do-list");
+    INFO_TO_DO_LIST.style.visibility = "visible";
+
+    const TITLE_USER_INFO_FROM_API = document.getElementById("project-title-user-info-from-api");
+    TITLE_USER_INFO_FROM_API.style.visibility = "hidden";
+    const SUBTITLE_USER_INFO_FROM_API = document.getElementById("project-subtitle-user-info-from-api");
+    SUBTITLE_USER_INFO_FROM_API.style.visibility = "hidden";
+    const INFO_USER_INFO_FROM_API = document.getElementById("project-info-user-info-from-api");
+    INFO_USER_INFO_FROM_API.style.visibility = "hidden";
+
+    const TITLE_DOMAIN_API_TOOL = document.getElementById("project-title-domain-api-tool");
+    TITLE_DOMAIN_API_TOOL.style.visibility = "hidden";
+    const SUBTITLE_DOMAIN_API_TOOL = document.getElementById("project-subtitle-domain-api-tool");
+    SUBTITLE_DOMAIN_API_TOOL.style.visibility = "hidden";
+    const INFO_DOMAIN_API_TOOL = document.getElementById("project-info-domain-api-tool");
+    INFO_DOMAIN_API_TOOL.style.visibility = "hidden";
+
+}
+
+
+function userInfoFromApi() {
+
+    hideTip();
+
+    const TITLE_DEFAULT = document.getElementById("project-title");
+    TITLE_DEFAULT.style.visibility = "hidden";
+    const SUBTITLE_DEFAULT = document.getElementById("project-subtitle");
+    SUBTITLE_DEFAULT.style.visibility = "hidden";
+    const INFO_DEFAULT = document.getElementById("project-info");
+    INFO_DEFAULT.style.visibility = "hidden";
+
+    const TITLE_BANKING_APPLICATION = document.getElementById("project-title-banking-application");
+    TITLE_BANKING_APPLICATION.style.visibility = "hidden";
+    const SUBTITLE_BANKING_APPLICATION = document.getElementById("project-subtitle-banking-application");
+    SUBTITLE_BANKING_APPLICATION.style.visibility = "hidden";
+    const INFO_BANKING_APPLICATION = document.getElementById("project-info-banking-application");
+    INFO_BANKING_APPLICATION.style.visibility = "hidden";
+
+    const TITLE_NEWS_API_APP = document.getElementById("project-title-newsapi-app");
+    TITLE_NEWS_API_APP.style.visibility = "hidden";
+    const SUBTITLE_NEWS_API_APP = document.getElementById("project-subtitle-newsapi-app");
+    SUBTITLE_NEWS_API_APP.style.visibility = "hidden";
+    const INFO_NEWS_API_APP = document.getElementById("project-info-newsapi-app");
+    INFO_NEWS_API_APP.style.visibility = "hidden";
+
+    const TITLE_TO_DO_LIST = document.getElementById("project-title-to-do-list");
+    TITLE_TO_DO_LIST.style.visibility = "hidden";
+    const SUBTITLE_TO_DO_LIST = document.getElementById("project-subtitle-to-do-list");
+    SUBTITLE_TO_DO_LIST.style.visibility = "hidden";
+    const INFO_TO_DO_LIST = document.getElementById("project-info-to-do-list");
+    INFO_TO_DO_LIST.style.visibility = "hidden";
+
+    const TITLE_USER_INFO_FROM_API = document.getElementById("project-title-user-info-from-api");
+    TITLE_USER_INFO_FROM_API.style.visibility = "visible";
+    const SUBTITLE_USER_INFO_FROM_API = document.getElementById("project-subtitle-user-info-from-api");
+    SUBTITLE_USER_INFO_FROM_API.style.visibility = "visible";
+    const INFO_USER_INFO_FROM_API = document.getElementById("project-info-user-info-from-api");
+    INFO_USER_INFO_FROM_API.style.visibility = "visible";
+
+    const TITLE_DOMAIN_API_TOOL = document.getElementById("project-title-domain-api-tool");
+    TITLE_DOMAIN_API_TOOL.style.visibility = "hidden";
+    const SUBTITLE_DOMAIN_API_TOOL = document.getElementById("project-subtitle-domain-api-tool");
+    SUBTITLE_DOMAIN_API_TOOL.style.visibility = "hidden";
+    const INFO_DOMAIN_API_TOOL = document.getElementById("project-info-domain-api-tool");
+    INFO_DOMAIN_API_TOOL.style.visibility = "hidden";
+
+}
+
+
+function domainApiTool() {
+
+    hideTip();
+
+    const TITLE_DEFAULT = document.getElementById("project-title");
+    TITLE_DEFAULT.style.visibility = "hidden";
+    const SUBTITLE_DEFAULT = document.getElementById("project-subtitle");
+    SUBTITLE_DEFAULT.style.visibility = "hidden";
+    const INFO_DEFAULT = document.getElementById("project-info");
+    INFO_DEFAULT.style.visibility = "hidden";
+
+    const TITLE_BANKING_APPLICATION = document.getElementById("project-title-banking-application");
+    TITLE_BANKING_APPLICATION.style.visibility = "hidden";
+    const SUBTITLE_BANKING_APPLICATION = document.getElementById("project-subtitle-banking-application");
+    SUBTITLE_BANKING_APPLICATION.style.visibility = "hidden";
+    const INFO_BANKING_APPLICATION = document.getElementById("project-info-banking-application");
+    INFO_BANKING_APPLICATION.style.visibility = "hidden";
+
+    const TITLE_NEWS_API_APP = document.getElementById("project-title-newsapi-app");
+    TITLE_NEWS_API_APP.style.visibility = "hidden";
+    const SUBTITLE_NEWS_API_APP = document.getElementById("project-subtitle-newsapi-app");
+    SUBTITLE_NEWS_API_APP.style.visibility = "hidden";
+    const INFO_NEWS_API_APP = document.getElementById("project-info-newsapi-app");
+    INFO_NEWS_API_APP.style.visibility = "hidden";
+
+    const TITLE_TO_DO_LIST = document.getElementById("project-title-to-do-list");
+    TITLE_TO_DO_LIST.style.visibility = "hidden";
+    const SUBTITLE_TO_DO_LIST = document.getElementById("project-subtitle-to-do-list");
+    SUBTITLE_TO_DO_LIST.style.visibility = "hidden";
+    const INFO_TO_DO_LIST = document.getElementById("project-info-to-do-list");
+    INFO_TO_DO_LIST.style.visibility = "hidden";
+
+    const TITLE_USER_INFO_FROM_API = document.getElementById("project-title-user-info-from-api");
+    TITLE_USER_INFO_FROM_API.style.visibility = "hidden";
+    const SUBTITLE_USER_INFO_FROM_API = document.getElementById("project-subtitle-user-info-from-api");
+    SUBTITLE_USER_INFO_FROM_API.style.visibility = "hidden";
+    const INFO_USER_INFO_FROM_API = document.getElementById("project-info-user-info-from-api");
+    INFO_USER_INFO_FROM_API.style.visibility = "hidden";
+
+    const TITLE_DOMAIN_API_TOOL = document.getElementById("project-title-domain-api-tool");
+    TITLE_DOMAIN_API_TOOL.style.visibility = "visible";
+    const SUBTITLE_DOMAIN_API_TOOL = document.getElementById("project-subtitle-domain-api-tool");
+    SUBTITLE_DOMAIN_API_TOOL.style.visibility = "visible";
+    const INFO_DOMAIN_API_TOOL = document.getElementById("project-info-domain-api-tool");
+    INFO_DOMAIN_API_TOOL.style.visibility = "visible";
 
 }

@@ -33,7 +33,9 @@
                     <h1 class="title-letter">l</h1>
                     <h1 class="title-letter last">C</h1>
                 </div>
-                <h5 id="subtitle"> From hobbyist to self-taught developer. Always looking to learn and to experiment with new projects and methods.
+                <h5 id="subtitle"> From hobbyist to self-taught developer. 
+                    Always looking to learn and to experiment with new projects 
+                    and methods.
                 </h5>
             </div>
                 <div id="animated-nav-bar">
@@ -49,92 +51,127 @@
                     My projects
                 </div>
             </div>
-            <div id="banking-application" class="project-tile">
-                <h4 class="project-title">Banking Application</h4>
-                <h6 class="project-subtitle">NeDb | Express | React | Node</h6>
-                <a href="https://github.com/pcon92/banking-application" target="__blank" class="project-image-link">
-                    <img class="project-image" id="banking-application-img" alt="banking-application" src="banking-app-1.jpg">
-                </a>
-                <div class="project-info" id="banking-application-info">
-                    A banking application including front-end and back-end with database for user accounts. 
-                    <br><br> 
-                    This project is my first attempt at a full stack application. 
-                    I chose a banking theme as this would mean 
-                    I need to learn about authentication and how to store user info in a database in a secure way.  
-                    <br><br>
-                    I did some research on methods to securely store the password of a user and found that bcrypt was an ideal choice as 
-                    it has a slow algorithm that ensures it is difficult to brute force attack the password.
-                    <br><br>
-                    On the Github readme I have listed current bugs that I need to fix and features that I plan to add in the future.
+            <div id="project-cube-page" class="project-tile">
+                <div class="title-div">
+                    <h4 class="project-title" id="project-title">Click a project for more info</h4>
+                    <h4 class="project-title" id="project-title-banking-application">Banking-Application</h4>
+                    <h4 class="project-title" id="project-title-newsapi-app">NewsAPI Android App</h4>
+                    <h4 class="project-title" id="project-title-to-do-list">To-Do List</h4>
+                    <h4 class="project-title" id="project-title-user-info-from-api">User Info from API</h4>
+                    <h4 class="project-title" id="project-title-domain-api-tool">Domain API Tool</h4>
+                </div>
+                <div class="subtitle-div">
+                    <p class="project-subtitle" id="project-subtitle"> </p>
+                    <p class="project-subtitle" id="project-subtitle-banking-application">NeDb | Express | React | Node</p>
+                    <p class="project-subtitle" id="project-subtitle-newsapi-app">React Native CLI</p>
+                    <p class="project-subtitle" id="project-subtitle-to-do-list">HTML | CSS | JavaScript</p>
+                    <p class="project-subtitle" id="project-subtitle-user-info-from-api">HTML | CSS | JavaScript | React</p>
+                    <p class="project-subtitle" id="project-subtitle-domain-api-tool">HTML | CSS | JavaScript</p>
+                </div>
+                <div class="project-cube-container-div">
+                    <div class="turn tleft" id="turn-left">
+                        &#9664;
+                    </div>
+                    <div class="project-cube-container-middle-div">
+                        <div class="turn tup" id="turn-up">
+                            &#9650;
+                        </div>
+                        <div class="project-cube-container">
+                            <div class="project-cube" id="project-cube">
+                                <div class="top face" onclick=toDoList()></div>
+                                <div class="bottom face" onclick=userInfoFromApi()></div>
+                                <div class="left face" onclick=domainApiTool()></div>
+                                <div class="right face" onclick=newsapiApp()></div>
+                                <div class="front face" onclick=bankingApplication()></div>
+                                <div class="back face" onclick=bankingApplication()></div>
+                            </div>
+                        </div>
+                        <div class="turn tdown" id="turn-down">
+                            &#9660;
+                        </div>
+                    </div>
+                    <div class="turn tright" id="turn-right">
+                        &#9654;
+                    </div>
+                    
+                </div>
+                <div id="click-a-side-tip">
+                    Click project image for more info...
+                </div>
+                <div class="info-div">
+                    <div class="project-info" id="project-info"></div>
+                    <div class="project-info" id="project-info-banking-application">
+                        <span>&#9205;</span>
+                        <a class="github-link" href="https://github.com/pcon92/banking-application" target="__blank">Github Repo</a>
+                        <br><br> 
+                        A banking application including front-end and back-end with database for user accounts. 
+                        <br><br> 
+                        This project is my first attempt at a full stack application. 
+                        I chose a banking theme as this would mean 
+                        I need to learn about authentication and how to store user info in a database in a secure way.  
+                        <br><br>
+                        I did some research on methods to securely store the password of a user and found that bcrypt was an ideal choice as 
+                        it has a slow algorithm that ensures it is difficult to brute force attack the password.
+                        <br><br>
+                        On the Github readme I have listed current bugs that I need to fix and features that I plan to add in the future.
+                    </div>
+                    <div class="project-info" id="project-info-newsapi-app">
+                        <span>&#9205;</span>
+                        <a class="github-link" href="https://github.com/pcon92/NewsApp" target="__blank">Github Repo</a>
+                        <br><br> 
+                        An app that provides recent news updates from the NewsAPI. 
+                        <br><br> 
+                        This project allowed me to translate my React knowledge onto React Native.
+                        <br><br>
+                        Some challenges I faced were setting up the React Native CLI environment as many 
+                        of the online resources I could access all focussed on using Expo to set up the app. 
+                        I also found it difficult at first installing and navigating the Android emulation environment.
+                        <br><br>
+                        I would like to include search by news topic in the future.
+                    </div>
+                    <div class="project-info" id="project-info-to-do-list">
+                        <span>&#9205;</span>
+                        <a class="github-link" href="https://github.com/pcon92/To-Do-List" target="__blank">Github Repo</a>
+                        <br><br> 
+                        A simple To-Do List application. 
+                        <br><br> 
+                        I picked this project to practice creating elements and deleting them from the DOM and to practice using CSS animations. 
+                        <br><br>
+                        Some challenges I faced were trying to fix an abrupt transition with the 'Show Customization Panel' label after the mouse had left 
+                        the specificied hover area.  Instead of using <code>:hover</code> I decided to add an event listener that would track <code>mouseenter</code>
+                        and <code>mouseleave</code>.  
+                        <br><br>
+                        I have plans to expand this application to allow the user to save their items on a local database before closing the application.
+                    </div>
+                    <div class="project-info" id="project-info-user-info-from-api">
+                        <span>&#9205;</span>
+                        <a class="github-link" href="https://github.com/pcon92/User-Finder" target="__blank">Github Repo</a>
+                        <br><br> 
+                        A tool to access User Information from the free, open source api "randomuser.me", built with React.
+                        <br><br>
+                        This project allowed me to focus on two new skills: using React to build an application and to access information from an API using fetch GET.
+                        <br><br>
+                        Initially I found it difficult to navigate through the JSON file provided by the API to access the specific information I needed.
+                        <br><br>
+                        I also found it challenging to include a right margin on the last column of information cards that would appear.  I discovered this was due
+                        to <code>flex: wrap</code> ignoring the padding and margin of the elements, so the easiest way around this was to create a pseudoelement after
+                        the last cards on the right.
+                    </div>
+                    <div class="project-info" id="project-info-domain-api-tool">
+                        <span>&#9205;</span>
+                        <a class="github-link" href="https://github.com/pcon92/domain-api-tool" target="__blank">Github Repo</a>
+                        <br><br> 
+                        A tool to search for properties in Australia using the Domain Group API.
+                        <br><br>
+                        After some experience in API use with my previous project I found this API much more difficult to navigate - I needed
+                        to learn how to use fetch POST requests and the documentation was not as clear.
+                        <br><br>
+                        I had considered building this with React however I wanted to try first to build it with vanilla JavaScript and then to rebuild it
+                        with React at a later date to practice how to convert projects between the two and to appreciate the benefits of the modularity of React when building a
+                        larger JavaScript application. 
+                    </div>
                 </div>
             </div>
-            <div id="newsapp" class="project-tile">
-                <h4 class="project-title">NewsAPI Android App</h4>
-                <h6 class="project-subtitle">React Native CLI</h6>
-                <a href="https://github.com/pcon92/NewsApp" target="__blank" class="project-image-link">
-                    <img class="project-image" id="newsapp-img" alt="to-do-list" src="news-api-3.jpg">
-                </a>
-                <div class="project-info" id="newsapi-info">
-                    An app that provides recent news updates from the NewsAPI. 
-                    <br><br> 
-                    This project allowed me to translate my React knowledge onto React Native.
-                    <br><br>
-                    Some challenges I faced were setting up the React Native CLI environment as many 
-                    of the online resources I could access all focussed on using Expo to set up the app. 
-                    I also found it difficult at first installing and navigating the Android emulation environment.
-                    <br><br>
-                    I would like to include search by news topic in the future.
-                </div>
-            </div>
-            <div id="to-do-list" class="project-tile">
-                <h4 class="project-title">To-Do List</h4>
-                <h6 class="project-subtitle">HTML | CSS | JavaScript</h6>
-                <a href="https://github.com/pcon92/To-Do-List" target="__blank" class="project-image-link"><img class="project-image" id="to-do-list-img" alt="to-do-list" src="to-do-list-img.jpg"></a>
-                <div class="project-info" id="to-do-list-info">
-                    A simple To-Do List application. 
-                    <br><br> 
-                    I picked this project to practice creating elements and deleting them from the DOM and to practice using CSS animations. 
-                    <br><br>
-                    Some challenges I faced were trying to fix an abrupt transition with the 'Show Customization Panel' label after the mouse had left 
-                    the specificied hover area.  Instead of using <code>:hover</code> I decided to add an event listener that would track <code>mouseenter</code>
-                    and <code>mouseleave</code>.  
-                    <br><br>
-                    I have plans to expand this application to allow the user to save their items on a local database before closing the application.
-                </div>
-            </div>
-            <div id="user-info-from-api" class="project-tile">
-                <h4 class="project-title">User Info from API</h4>
-                <h6 class="project-subtitle">HTML | CSS | JavaScript | React</h6>
-                <a href="https://github.com/pcon92/User-Finder" target="__blank" class="project-image-link">
-                    <img class="project-image" id="user-info-from-api-img" alt="user-info-from-api" src="user-info-img.jpg"></a>
-                <div class="project-info" id="user-info-from-api-info">
-                    A tool to access User Information from the free, open source api "randomuser.me", built with React.
-                    <br><br>
-                    This project allowed me to focus on two new skills: using React to build an application and to access information from an API using fetch GET.
-                    <br><br>
-                    Initially I found it difficult to navigate through the JSON file provided by the API to access the specific information I needed.
-                    <br><br>
-                    I also found it challenging to include a right margin on the last column of information cards that would appear.  I discovered this was due
-                    to <code>flex: wrap</code> ignoring the padding and margin of the elements, so the easiest way around this was to create a pseudoelement after
-                    the last cards on the right.
-                </div>
-            </div>
-            <div id="domain-api-tool" class="project-tile">
-                <h4 class="project-title">Domain API Tool</h4>
-                <h6 class="project-subtitle">HTML | CSS | JavaScript</h6>
-                <a href="https://github.com/pcon92/domain-api-tool" target="__blank" class="project-image-link"><img class="project-image" id="domain-api-tool-img" alt="domain-api-tool" src="domain-api-tool-img.jpg"></a>
-                <div class="project-info" id="domain-api-tool-info">
-                    A tool to search for properties in Australia using the Domain Group API.
-                    <br><br>
-                    After some experience in API use with my previous project I found this API much more difficult to navigate - I needed
-                    to learn how to use fetch POST requests and the documentation was not as clear.
-                    <br><br>
-                    I had considered building this with React however I wanted to try first to build it with vanilla JavaScript and then to rebuild it
-                    with React at a later date to practice how to convert projects between the two and to appreciate the benefits of the modularity of React when building a
-                    larger JavaScript application. 
-                </div>
-            </div>
-
         </div>
 
         <div id="last-page-div" class="page-div">
@@ -157,3 +194,4 @@
 
 
 </html>
+
