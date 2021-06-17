@@ -24,6 +24,7 @@ function randomColorGenerator() {
 // GSAP animations //
 let tl1 = gsap.timeline();
 tl1.from("#project-cube-page", {xPercent: -100})
+    .from("#click-a-side-tip", {opacity: 0})
 
 gsap.to("#color-circle", {duration: 1, repeat: -1, onRepeat: randomColorGenerator});
 
@@ -47,16 +48,17 @@ gsap.to("#color-circle",
 gsap.to("#animated-nav-bar", 
 {scrollTrigger: 
     {trigger: "#project-section-div", start: 0, end: "+=70%", scrub: true},  
-    x: `-=${navLeftDist}`});
+    x: `-=${navLeftDist - 8}`}); // 8 for pixel margin from left (same as next scrollTrigger margin from top
+                                 // under start: "top 8px")
 
 gsap.to("#animated-nav-bar", 
 {scrollTrigger: 
-    {trigger: "#animated-nav-bar", start: "top top", end: "+=500%", scrub: true, pin: "#animated-nav-bar", overflow:"hidden"},  
-    top: "0px"});
+    {trigger: "#animated-nav-bar", start: "top 8px", end: "+=500%", scrub: true, pin: "#animated-nav-bar", overflow:"hidden"},  
+    zIndex: 100});
 
 gsap.to("#project-tile-intro-info", 
 {scrollTrigger: 
-    {trigger: "#project-section-div", start: "top +=30%", end: "+=29%", scrub: true},  
+    {trigger: "#project-section-div", start: "top +30%", end: "+=30%", scrub: true},  
     opacity: 1});
 
 gsap.from("#contact-me-list", 
@@ -66,10 +68,10 @@ gsap.from("#contact-me-list",
 
 gsap.from("#color-circle-2", 
 {scrollTrigger: 
-        {trigger: "#contact-me-list", start: "bottom +=20%", end: "+=80%", scrub: true, overflow:"hidden"},  
+        {trigger: "#last-page-div", start: "bottom", end: "+=50%", scrub: true, overflow:"hidden"},  
         x: `-=${circleLeftDist}`});
 
-// Different syntax to use scroll trigger for sliding project tiles with timeline 1 as practice
+// Different syntax to use scroll trigger for sliding project tiles with timeline 1 as practice with GSAP
 ScrollTrigger.create({
     animation: tl1,
     trigger: "#project-section-div",
@@ -80,12 +82,6 @@ ScrollTrigger.create({
     pin: true,
     anticipatePin: 1
 })
-
-function alertTwitter() {
-    alert('Twitter account coming in the future');
-}
-
-
 
 
 const TITLE_NAME_DIV = document.getElementById("title-name-div");
@@ -180,13 +176,11 @@ const TITLE_CONTAINER_CENTER = [TITLE_CONTAINER.x + (TITLE_CONTAINER.width/2),
 function gettingCloser() {
     let closerX = TITLE_CONTAINER_CENTER[0] - currentMousePos[0];
     let closerY = TITLE_CONTAINER_CENTER[1] - currentMousePos[1];
-    
+
     let howClose = [Math.abs(closerX)/1000 , Math.abs(closerY)/500]
 
     return howClose;
-
 }
-
 
 
 // for project cube

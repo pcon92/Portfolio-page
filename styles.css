@@ -8,8 +8,9 @@
 /* Set color variables */
 
 :root {
-    --off-white:  rgb(249, 246, 239);
+    --off-white:  rgb(238, 238, 238);
     --dark-grey: rgb(20, 20, 20); 
+    --light-grey: rgb(120, 120, 120); 
     --font: 'Dosis', sans-serif;
     --font-2: 'Montserrat', sans-serif;
 }
@@ -109,7 +110,8 @@ body {
 
 #project-tile-intro-info {
     font-size: 6rem;
-    font-family: var(--font)
+    font-family: var(--font);
+    opacity: 0;
 }          
 
 #project-cube-page {
@@ -134,7 +136,7 @@ body {
         justify-content: center;
         align-items: center;
         position: relative;
-        box-shadow: 0px 0px 200px 1px white;
+        box-shadow: 0px 0px 200px 10px white;
         background-color: rgba(255, 255, 255, 0.3);
     }
 
@@ -157,7 +159,7 @@ body {
         position: absolute;
         width: 100%;
         height: 100%;
-        border: 3px solid var(--dark-grey);
+        border: 30px ridge var(--light-grey);
     }
 
     .face:hover {
@@ -311,6 +313,40 @@ body {
     background-color: var(--off-white);
 }
 
+    #dev-icon-and-circle-div {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 800px;
+        height: 600px;
+    }
+
+    .dev-icons-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 200px;
+        height: 600px;
+    }
+
+    .devicon {
+        font-size: 5rem;
+    }
+
+    .devicon-shift-right {
+        align-self: flex-end;
+    }
+
+    .devicon-shift-left {
+        align-self: flex-start;
+    }
+
+    .devicon:hover {
+        transform: scale(1);
+        cursor: default;
+    }
+
     #color-circle-2 {
         border-radius: 50%;
         border: 3px solid black;
@@ -320,7 +356,7 @@ body {
     }
 
     #title-contact-me {
-        font-size: 7rem;
+        font-size: 6rem;
         font-family: var(--font);
         margin: 2.5rem;
     }
@@ -340,6 +376,7 @@ body {
         transform:  scale(1.1);
         cursor: pointer;
     }
+
 
 
 
@@ -380,6 +417,10 @@ body {
     .project-cube {
         width: 180px;
         height: 180px;
+    }
+
+    .face {
+        border: 20px ridge var(--light-grey);
     }
 
     .back {
@@ -446,9 +487,22 @@ body {
         font-size: .5rem;
     }
 
+    #dev-icon-and-circle-div {
+        width: 300px;
+        height: 300px;
+    }
+
+    .dev-icons-div {
+        width: 50px;
+        height: 300px;
+    }
+
+    .devicon {
+        font-size: 2rem;
+    }
+
     #title-contact-me {
         font-size: 2.5rem;
-        font-family: var(--font);
     }
 
 }
@@ -487,6 +541,10 @@ body {
     .project-cube {
         width: 180px;
         height: 180px;
+    }
+
+    .face {
+        border: 20px ridge var(--light-grey);
     }
 
     .back {
@@ -552,9 +610,22 @@ body {
         font-size: .5rem;
     }
 
+    #dev-icon-and-circle-div {
+        width: 350px;
+        height: 250px;
+    }
+
+    .dev-icons-div {
+        width: 100px;
+        height: 300px;
+    }
+
+    .devicon {
+        font-size: 3rem;
+    }
+
     #title-contact-me {
         font-size: 3rem;
-        font-family: var(--font);
         margin: 2.5rem;
     }
 
@@ -594,6 +665,10 @@ body {
     .project-cube {
         width: 300px;
         height: 300px;
+    }
+
+    .face {
+        border: 30px ridge var(--light-grey);
     }
 
     .back {
@@ -659,9 +734,22 @@ body {
         font-size: .7rem;
     }
 
+    #dev-icon-and-circle-div {
+        width: 800px;
+        height: 500px;
+    }
+
+    .dev-icons-div {
+        width: 200px;
+        height: 500px;
+    }
+    
+    .devicon {
+        font-size: 5rem;
+    }
+
     #title-contact-me {
         font-size: 5rem;
-        font-family: var(--font);
         margin: 2.5rem;
     }
 
@@ -703,6 +791,9 @@ body {
         height: 300px;
     }
 
+    .face {
+        border: 30px ridge var(--light-grey);
+    }
     
     .back {
         transform: rotateY(180deg) translate3d(0, 0, 150px);
@@ -763,10 +854,22 @@ body {
         width: 20rem;
     }
 
+    #dev-icon-and-circle-div {
+        width: 800px;
+        height: 600px;
+    }
+
+    .dev-icons-div {
+        width: 200px;
+        height: 600px;
+    }
+    
+    .devicon {
+        font-size: 5rem;
+    }
+
     #title-contact-me {
-        font-size: 7rem;
-        font-family: var(--font);
-        margin: 2.5rem;
+        font-size: 4rem;
     }
 
 }

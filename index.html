@@ -4,7 +4,6 @@
 
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <!-- Use Font Awesome for icons -->
         <script src="https://kit.fontawesome.com/8853004b20.js" crossorigin="anonymous"></script>
         <!-- Use styles.css file -->
@@ -13,16 +12,14 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-        
+        <!-- Use Devicon icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css">
         <title>
-            Paul C
+            Portfolio
         </title>
-
     </head>
 
-
     <body>
-
         <div id="intro-page-div" class="page-div">
             <div id="intro-page-content">
                 <div id="color-circle" class="color-circle"></div>
@@ -44,7 +41,6 @@
                     <a href="#last-page-div" class="nav-link">Contact Me</a>
                 </div>
         </div>
-
         <div id="project-section-div" class="page-div">
             <div id="project-tile-intro" class="project-tile">
                 <div id="project-tile-intro-info" class="project-tile-intro-div">
@@ -96,7 +92,7 @@
                     
                 </div>
                 <div id="click-a-side-tip">
-                    Click project image for more info...
+                    Click a project for more info...
                 </div>
                 <div class="info-div">
                     <div class="project-info" id="project-info"></div>
@@ -175,11 +171,26 @@
         </div>
 
         <div id="last-page-div" class="page-div">
-            <div id="color-circle-2" class="color-circle"></div>
-            <h3 id="title-contact-me">Contact me</h3>
+            <div id="dev-icon-and-circle-div">
+                <div class="dev-icons-div" id="dev-icons-left">
+                    <i class="devicon-html5-plain-wordmark colored devicon devicon-shift-right"></i>
+                    <i class="devicon-css3-plain-wordmark colored devicon"></i>
+                    <i class="devicon-javascript-plain colored devicon"></i>
+                    <i class="devicon-react-original-wordmark colored devicon devicon-shift-right"></i>
+                </div>
+                <div id="color-circle-2" class="color-circle"></div>
+                <div class="dev-icons-div" id="dev-icons-right">
+                    <i class="devicon-nodejs-plain-wordmark colored devicon devicon-shift-left"></i>
+                    <i class="devicon-express-original-wordmark colored devicon"></i>
+                    <i class="devicon-mysql-plain-wordmark colored devicon"></i>
+                    <i class="devicon-android-plain-wordmark colored devicon devicon-shift-left"></i>
+                </div>
+
+            </div>
+            <p id="title-contact-me">Contact me</p>
             <ul id="contact-me-list">
-                <li><a href="https://github.com/pcon92" target="__blank" class="contact-me-links"><i class="fab fa-github-square fa-4x"></i></i></a></li>
-                <li><a href="#last-page-div" class="contact-me-links" onclick=alertTwitter()><i class="fab fa-twitter-square fa-4x"></i></a></li>
+                <li><a href="mailto:palu_comgui@outlook.com" class="contact-me-links"><i class="fas fa-envelope-square fa-3x"></i></a></li>
+                <li><a href="https://github.com/pcon92" target="__blank" class="contact-me-links"><i class="fab fa-github-square fa-3x"></i></i></a></li>
             </ul>
         </div>
 
