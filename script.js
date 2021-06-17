@@ -2,13 +2,10 @@
 let navLeftDist = (document.documentElement.clientWidth / 2) - (document.getElementById("animated-nav-bar").offsetWidth / 2);
 let circleRightDist = (document.documentElement.clientWidth / 2) + (document.getElementById("animated-nav-bar").offsetWidth / 2);
 let circleLeftDist = (document.documentElement.clientWidth / 2) + (document.getElementById("animated-nav-bar").offsetWidth / 2);
-let contactLinksDist = (document.documentElement.clientHeight / 2) - (document.getElementById("contact-me-list").offsetHeight / 2);
 
 window.addEventListener("resize", () => {
     location.reload();
   });
-
-
 
 // Create and call function for random colors in circles
 function randomColorGenerator() {
@@ -23,11 +20,12 @@ function randomColorGenerator() {
 
 
 // GSAP animations //
-let tl1 = gsap.timeline();
-tl1.from("#project-cube-page", {xPercent: -100})
-    .from("#click-a-side-tip", {opacity: 0})
 
 gsap.to("#color-circle", {duration: 1, repeat: -1, onRepeat: randomColorGenerator});
+
+gsap.from("#color-circle", {opacity: 0, scale: 0.1, duration: 1.5});
+
+gsap.from("#subtitle", {opacity: 0, duration: 1.5, ease: "power3.in"});
 
 gsap.to(".title-letter", {transform: "translateX(10px)", 
     duration: 0.2,
@@ -35,10 +33,6 @@ gsap.to(".title-letter", {transform: "translateX(10px)",
     stagger: 0.2, 
     yoyo: true});
 
-
-gsap.from("#color-circle", {opacity: 0, scale: 0.1, duration: 1.5});
-
-gsap.from("#subtitle", {opacity: 0, duration: 1.5, ease: "power3.in"});
 
 gsap.to("#color-circle", 
 {scrollTrigger: 
@@ -56,34 +50,11 @@ gsap.to("#animated-nav-bar",
 {scrollTrigger: 
     {trigger: "#animated-nav-bar", start: "top 8px", end: "+=500%", scrub: true, pin: "#animated-nav-bar", overflow:"hidden"},  
     zIndex: 100});
-
-gsap.to("#project-tile-intro-info", 
-{scrollTrigger: 
-    {trigger: "#project-section-div", start: "top +30%", end: "+=30%", scrub: true},  
-    opacity: 1});
-
-gsap.from("#contact-me-list", 
-{scrollTrigger: 
-        {trigger: "#title-contact-me", start: "bottom", end: "+=100%", scrub: true, overflow:"hidden"},  
-        y: `+=${contactLinksDist}`});
-
+    
 gsap.from("#color-circle-2", 
 {scrollTrigger: 
-        {trigger: "#last-page-div", start: "bottom", end: "+=50%", scrub: true, overflow:"hidden"},  
+        {trigger: "#last-page-div", start: "top bottom", end: "+=100%", scrub: true, overflow:"hidden"},  
         x: `-=${circleLeftDist}`});
-
-// Different syntax to use scroll trigger for sliding project tiles with timeline 1 as practice with GSAP
-ScrollTrigger.create({
-    animation: tl1,
-    trigger: "#project-section-div",
-    start: "top top",
-    end: "+=2000",
-    snap: {snapTo: 1, delay: 0.25, duration: {min: 0.2, max: 1}},
-    scrub: true,
-    pin: true,
-    anticipatePin: 1
-})
-
 
 const TITLE_NAME_DIV = document.getElementById("title-name-div");
 

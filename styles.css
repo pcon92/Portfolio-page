@@ -11,10 +11,11 @@
 
 :root {
     --off-white:  rgb(238, 238, 238);
-    --dark-grey: rgb(20, 20, 20); 
+    --dark-grey: rgb(25, 25, 25); 
     --light-grey: rgb(120, 120, 120); 
     --font: 'Dosis', sans-serif;
     --font-2: 'Montserrat', sans-serif;
+    --title-text-shadow: 2px -2px 1px teal, -2px 2px 1px red;
 }
 
 
@@ -22,11 +23,13 @@
 
 html {
     scroll-behavior: smooth !important;
+    scroll-snap-type: y proximity;
 }
 
 body {
     height: 300vh;
     background-color: var(--off-white);
+
 }
 
 .page-div {
@@ -41,6 +44,7 @@ body {
     background-color: var(--dark-grey);
     color: white;
     overflow: hidden;
+    scroll-snap-align: start;
 }
 
     #intro-page-content {
@@ -49,6 +53,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
     }
 
         #color-circle {
@@ -67,7 +72,7 @@ body {
             .title-letter {
                 font-family: var(--font);
                 font-size: 6rem;
-                text-shadow: 2px -2px 1px teal, -2px 2px 1px red;
+                text-shadow: var(--title-text-shadow);
                 margin-left: 0.5rem;
             }
             
@@ -113,15 +118,8 @@ body {
                 transform: scale(1.05);
             }
 
-
-#project-tile-intro-info {
-    font-size: 6rem;
-    font-family: var(--font);
-    opacity: 0;
-}          
-
 #project-cube-page {
-    background-color: var(--dark-grey)
+    background-color: var(--dark-grey);
 }
 
     /* For project cube */
@@ -231,16 +229,17 @@ body {
         justify-content: center;
         align-items: center;
         overflow: hidden;
+        scroll-snap-align: start;
     }
 
         .project-tile {
-            position: absolute;
             width: 100%;
             height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            scroll-snap-align: start;
         }
 
         .title-div {
@@ -316,7 +315,8 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: var(--off-white);
+    background-color: var(--dark-grey);
+    scroll-snap-align: start;
 }
 
     #dev-icon-and-circle-div {
@@ -334,10 +334,15 @@ body {
         align-items: center;
         width: 200px;
         height: 600px;
+
     }
 
     .devicon {
         font-size: 5rem;
+        background-color: var(--off-white);
+        border-radius: 50%;
+        padding: 20px;
+    
     }
 
     .devicon-shift-right {
@@ -350,12 +355,14 @@ body {
 
     .devicon:hover {
         transform: scale(1);
-        cursor: default;
+        cursor: default;        
+        box-shadow: 0px 0px 100px 5px var(--off-white);
+        transition: box-shadow 0.3s;
     }
 
     #color-circle-2 {
         border-radius: 50%;
-        border: 3px solid black;
+        border: 3px solid white;
         height: 20rem;
         width: 20rem;
         background-color: var(--off-white);
@@ -365,6 +372,8 @@ body {
         font-size: 6rem;
         font-family: var(--font);
         margin: 2.5rem;
+        color: white;
+        text-shadow: var(--title-text-shadow);
     }
         
     #contact-me-list {
@@ -375,7 +384,7 @@ body {
     }
 
     .contact-me-links {
-        color: black
+        color: white;
     }
 
     i:hover {
@@ -405,13 +414,9 @@ body {
     #subtitle {
         width: 10rem;
     }
-
-    #project-tile-intro-info {
-        font-size: 2rem;
-    }    
     
     .project-cube-container-div {
-        height: 250px;
+        height: 300px;
         width: 250px;
     }
 
@@ -426,7 +431,7 @@ body {
     }
 
     .face {
-        border: 20px ridge var(--light-grey);
+        border: 12px ridge var(--light-grey);
     }
 
     .back {
@@ -467,7 +472,7 @@ body {
     }
 
     .subtitle-div {
-        height: 20px;
+        height: 30px;
     }
 
     .project-subtitle {
@@ -504,7 +509,8 @@ body {
     }
 
     .devicon {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        padding: 10px;
     }
 
     #title-contact-me {
@@ -530,12 +536,8 @@ body {
         width: 11rem;
     }
 
-    #project-tile-intro-info {
-        font-size: 3rem;
-    }    
-
     .project-cube-container-div {
-        height: 250px;
+        height: 300px;
         width: 250px;
     }
 
@@ -550,7 +552,7 @@ body {
     }
 
     .face {
-        border: 20px ridge var(--light-grey);
+        border: 10px ridge var(--light-grey);
     }
 
     .back {
@@ -591,7 +593,7 @@ body {
     }
 
     .subtitle-div {
-        height: 20px;
+        height: 30px;
     }
 
     .project-subtitle {
@@ -627,7 +629,8 @@ body {
     }
 
     .devicon {
-        font-size: 3rem;
+        font-size: 2rem;
+        padding: 10px;
     }
 
     #title-contact-me {
@@ -654,10 +657,6 @@ body {
         width: 15rem;
     }
 
-    #project-tile-intro-info {
-        font-size: 6rem;
-    }    
-
     .project-cube-container-div {
         height: 500px;
         width: 500px;
@@ -674,7 +673,7 @@ body {
     }
 
     .face {
-        border: 30px ridge var(--light-grey);
+        border: 15px ridge var(--light-grey);
     }
 
     .back {
@@ -752,6 +751,7 @@ body {
     
     .devicon {
         font-size: 5rem;
+        padding: 20px;
     }
 
     #title-contact-me {
@@ -777,11 +777,7 @@ body {
     #subtitle {
         width: 15rem;
     }
-
-    #project-tile-intro-info {
-        font-size: 6rem;
-    }    
-
+    
     .project-cube-container-div {
         height: 500px;
         width: 500px;
@@ -798,7 +794,7 @@ body {
     }
 
     .face {
-        border: 30px ridge var(--light-grey);
+        border: 15px groove var(--light-grey);
     }
     
     .back {
@@ -872,10 +868,11 @@ body {
     
     .devicon {
         font-size: 5rem;
+        padding: 20px;
     }
 
     #title-contact-me {
-        font-size: 4rem;
+        font-size: 5rem;
     }
 
 }
