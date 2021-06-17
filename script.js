@@ -53,7 +53,7 @@ gsap.to("#animated-nav-bar",
     
 gsap.from("#color-circle-2", 
 {scrollTrigger: 
-        {trigger: "#last-page-div", start: "top bottom", end: "+=100%", scrub: true, overflow:"hidden"},  
+        {trigger: "#last-page-div", start: "top bottom", end: "+=1%", scrub: true, overflow:"hidden"},  
         x: `-=${circleLeftDist}`});
 
 const TITLE_NAME_DIV = document.getElementById("title-name-div");
@@ -157,34 +157,87 @@ function gettingCloser() {
 
 // for project cube
 
-let rotation = 0;
+let rotationX = 0;
+let rotationY = 0;
 
 document.getElementById("turn-right").addEventListener('click', () => {
-    rotation += 90;
-    document.getElementById("project-cube").style.transform = `rotateY(${rotation}deg)`;
-    clearInterval(autoCubeRotate);
+    rotationY += 90;
+    document.getElementById("project-cube").style.transform = `rotateY(${rotationY}deg)`;
+    showFaceInfoY();
 });
 document.getElementById("turn-left").addEventListener('click', () => {
-    rotation -= 90;
-    document.getElementById("project-cube").style.transform = `rotateY(${rotation}deg)`;
-    clearInterval(autoCubeRotate);
+    rotationY -= 90;
+    document.getElementById("project-cube").style.transform = `rotateY(${rotationY}deg)`;
+    showFaceInfoY();
 });
 document.getElementById("turn-up").addEventListener('click', () => {
-    rotation += 90;
-    document.getElementById("project-cube").style.transform = `rotateX(${rotation}deg)`;
-    clearInterval(autoCubeRotate);
+    rotationX += 90;
+    document.getElementById("project-cube").style.transform = `rotateX(${rotationX}deg)`;
+    showFaceInfoX();
 });
 document.getElementById("turn-down").addEventListener('click', () => {
-    rotation -= 90;
-    document.getElementById("project-cube").style.transform = `rotateX(${rotation}deg)`;
-    clearInterval(autoCubeRotate);
+    rotationX -= 90;
+    document.getElementById("project-cube").style.transform = `rotateX(${rotationX}deg)`;
+    showFaceInfoX();
 });
 
 
-const autoCubeRotate = setInterval(() => {
-        rotation += 90;
-        document.getElementById("project-cube").style.transform = `rotateY(${rotation}deg)`;
-}, 3000)
+function showFaceInfoY () {
+    if (rotationY > 180) {
+        rotationY -= 180;
+        rotationY *= -1;
+    }
+    if (rotationY < -180) {
+        rotationY += 180;
+        rotationY *= -1;
+    }
+    switch (rotationY) {
+        case 0:
+            bankingApplication();
+            break;
+        case 90:
+            domainApiTool();
+            break;
+        case -90:
+            newsapiApp();
+            break;
+        case 180:
+            bankingApplication();
+            break;
+        case -180:
+            bankingApplication();
+            break;
+    }
+}
+
+
+function showFaceInfoX () {
+    if (rotationX > 180) {
+        rotationX -= 180;
+        rotationX *= -1;
+    }
+    if (rotationX < -180) {
+        rotationX += 180;
+        rotationX *= -1;
+    }
+    switch (rotationX) {
+        case 0:
+            bankingApplication();
+            break;
+        case 90:
+            userInfoFromApi();
+            break;
+        case -90:
+            toDoList();
+            break;
+        case 180:
+            bankingApplication();
+            break;
+        case -180:
+            bankingApplication();
+            break;
+    }
+}
 
 
 const TIP = document.getElementById("click-a-side-tip");
@@ -214,10 +267,18 @@ const SUBTITLE_DOMAIN_API_TOOL = document.getElementById("project-subtitle-domai
 const INFO_DOMAIN_API_TOOL = document.getElementById("project-info-domain-api-tool");
 
 
+function showTurnArrows() {
+    document.getElementById("turn-left").style.visibility = "visible";
+    document.getElementById("turn-up").style.visibility = "visible";
+    document.getElementById("turn-down").style.visibility = "visible";
+    document.getElementById("turn-right").style.visibility = "visible";
+}
+
 
 function bankingApplication() {
 
     hideTip();
+    showTurnArrows();
 
     TITLE_BANKING_APPLICATION.style.visibility = "visible";
     TITLE_BANKING_APPLICATION.style.opacity = 1;
@@ -261,6 +322,7 @@ function newsapiApp() {
 
     hideTip();
 
+    
     TITLE_BANKING_APPLICATION.style.visibility = "hidden";
     TITLE_BANKING_APPLICATION.style.opacity = 0;
     SUBTITLE_BANKING_APPLICATION.style.visibility = "hidden";
