@@ -9,6 +9,7 @@ window.addEventListener("resize", () => {
   });
 
 
+
 // Create and call function for random colors in circles
 function randomColorGenerator() {
     let rgb1 = Math.floor(256*Math.random()-1);
@@ -218,7 +219,7 @@ const autoCubeRotate = setInterval(() => {
 const TIP = document.getElementById("click-a-side-tip");
 
 function hideTip() {
-    TIP.style.opacity = 0;
+    TIP.style.visibility = "hidden";
 }
 
 const TITLE_BANKING_APPLICATION = document.getElementById("project-title-banking-application");

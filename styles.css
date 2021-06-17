@@ -5,6 +5,8 @@
     padding: 0;
 }
 
+
+
 /* Set color variables */
 
 :root {
@@ -17,6 +19,10 @@
 
 
 /* Main */
+
+html {
+    scroll-behavior: smooth !important;
+}
 
 body {
     height: 300vh;
