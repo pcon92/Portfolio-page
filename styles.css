@@ -21,6 +21,10 @@
 
 /* Main */
 
+html {
+    overscroll-behavior-y: contain;
+}
+
 :focus { /* to fix the blue highlight around turn arrows on chrome android*/
     outline: none !important
 }
@@ -28,7 +32,7 @@
 body {
     height: 300vh;
     background-color: var(--off-white);
-
+    width: 100vw/vh;
 }
 
 .page-div {
