@@ -33,6 +33,10 @@ gsap.to(".title-letter", {transform: "translateX(10px)",
     stagger: 0.2, 
     yoyo: true});
 
+ScrollTrigger.config({
+    autoRefreshEvents: "visibilitychange, DOMContentLoaded, load" // no resize to prevent refresh on chrome android
+});
+
 
 gsap.to("#color-circle", 
 {scrollTrigger: 

@@ -21,28 +21,14 @@
 
 /* Main */
 
-
 :focus { /* to fix the blue highlight around turn arrows on chrome android*/
     outline: none !important
 }
 
-.body, 
-.wrapper {
-    position: absolute;
-    top: 0px;
-    width: 100%;
+body {
     height: 300vh;
-    margin: 0;
-    overflow-y: auto;
-}
-
-.body {
     background-color: var(--off-white);
-    z-index: 1;
-}
 
-.wrapper {
-    z-index: 2;
 }
 
 .page-div {
