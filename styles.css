@@ -21,6 +21,10 @@
 
 /* Main */
 
+:focus { /* to fix the blue highlight around turn arrows on chrome android*/
+    outline: none !important
+}
+
 body {
     height: 300vh;
     background-color: var(--off-white);
