@@ -53,7 +53,7 @@ gsap.to("#animated-nav-bar",
     
 gsap.from("#color-circle-2", 
 {scrollTrigger: 
-        {trigger: "#last-page-div", start: "top bottom", end: "+=1%", scrub: true, overflow:"hidden"},  
+        {trigger: "#project-section-div", start: "top", end: "+=100%", scrub: true, overflow:"hidden"},  
         x: `-=${circleLeftDist}`});
 
 const TITLE_NAME_DIV = document.getElementById("title-name-div");

@@ -21,12 +21,6 @@
 
 /* Main */
 
-html {
-    scroll-behavior: smooth !important;
-    scroll-snap-type: y proximity;
-    overscroll-behavior: none;
-}
-
 body {
     height: 300vh;
     background-color: var(--off-white);
@@ -45,7 +39,6 @@ body {
     background-color: var(--dark-grey);
     color: white;
     overflow: hidden;
-    scroll-snap-align: start;
 }
 
     #intro-page-content {
@@ -232,7 +225,6 @@ body {
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        scroll-snap-align: start;
     }
 
         .project-tile {
@@ -242,7 +234,6 @@ body {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            scroll-snap-align: start;
         }
 
         .title-div {
@@ -319,7 +310,6 @@ body {
     align-items: center;
     overflow: hidden;
     background-color: var(--dark-grey);
-    scroll-snap-align: start;
 }
 
     #dev-icon-and-circle-div {
@@ -345,7 +335,7 @@ body {
         background-color: var(--off-white);
         border-radius: 50%;
         padding: 20px;
-    
+        z-index: 5;
     }
 
     .devicon-shift-right {
