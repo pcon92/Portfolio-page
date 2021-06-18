@@ -3,10 +3,6 @@ let navLeftDist = (document.documentElement.clientWidth / 2) - (document.getElem
 let circleRightDist = (document.documentElement.clientWidth / 2) + (document.getElementById("animated-nav-bar").offsetWidth / 2);
 let circleLeftDist = (document.documentElement.clientWidth / 2) + (document.getElementById("animated-nav-bar").offsetWidth / 2);
 
-window.addEventListener("resize", () => {
-    location.reload();
-  });
-
 // Create and call function for random colors in circles
 function randomColorGenerator() {
     let rgb1 = Math.floor(256*Math.random()-1);
