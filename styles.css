@@ -211,6 +211,7 @@ body {
         opacity: 0.5;
         visibility: hidden;
         user-select: none;
+        -webkit-tap-highlight-color: transparent; 
     }
 
     .turn:hover {
