@@ -216,6 +216,7 @@ body {
         align-items: center;
         opacity: 0.5;
         visibility: hidden;
+
     }
 
     .turn:hover {
@@ -423,13 +424,13 @@ body {
     }
 
     .project-cube-container {
-        width: 180px;
-        height: 180px;
+        width: 160px;
+        height: 160px;
     }
 
     .project-cube {
-        width: 180px;
-        height: 180px;
+        width: 160px;
+        height: 160px;
     }
 
     .face {
@@ -437,27 +438,27 @@ body {
     }
 
     .back {
-        transform: rotateY(180deg) translate3d(0, 0, 90px);
+        transform: rotateY(180deg) translate3d(0, 0, 80px);
     }
 
     .front {
-        transform: translate3d(0, 0, 90px);
+        transform: translate3d(0, 0, 80px);
     }
 
     .left {
-        transform: rotateY(-90deg) translate3d(0, 0, 90px);
+        transform: rotateY(-90deg) translate3d(0, 0, 80px);
     }
 
     .right {
-        transform: rotateY(90deg) translate3d(0, 0, 90px);
+        transform: rotateY(90deg) translate3d(0, 0, 80px);
     }
 
     .top {
-        transform: rotateX(90deg) translate3d(0, 0, 90px);
+        transform: rotateX(90deg) translate3d(0, 0, 80px);
     }
 
     .bottom {
-        transform: rotateX(-90deg) translate3d(0, 0, 90px);
+        transform: rotateX(-90deg) translate3d(0, 0, 80px);
     }
 
     #click-a-side-tip {
@@ -474,7 +475,7 @@ body {
     }
 
     .subtitle-div {
-        height: 30px;
+        height: 20px;
     }
 
     .project-subtitle {
@@ -539,19 +540,18 @@ body {
     }
 
     .project-cube-container-div {
-        margin-top: 1.5rem;
         height: 250px;
         width: 250px;
     }
 
     .project-cube-container {
-        width: 180px;
-        height: 180px;
+        width: 160px;
+        height: 160px;
     }
 
     .project-cube {
-        width: 180px;
-        height: 180px;
+        width: 160px;
+        height: 160px;
     }
 
     .face {
@@ -559,27 +559,27 @@ body {
     }
 
     .back {
-        transform: rotateY(180deg) translate3d(0, 0, 90px);
+        transform: rotateY(180deg) translate3d(0, 0, 80px);
     }
 
     .front {
-        transform: translate3d(0, 0, 90px);
+        transform: translate3d(0, 0, 80px);
     }
 
     .left {
-        transform: rotateY(-90deg) translate3d(0, 0, 90px);
+        transform: rotateY(-90deg) translate3d(0, 0, 80px);
     }
 
     .right {
-        transform: rotateY(90deg) translate3d(0, 0, 90px);
+        transform: rotateY(90deg) translate3d(0, 0, 80px);
     }
 
     .top {
-        transform: rotateX(90deg) translate3d(0, 0, 90px);
+        transform: rotateX(90deg) translate3d(0, 0, 80px);
     }
 
     .bottom {
-        transform: rotateX(-90deg) translate3d(0, 0, 90px);
+        transform: rotateX(-90deg) translate3d(0, 0, 80px);
     }
 
     #click-a-side-tip {
@@ -596,7 +596,7 @@ body {
     }
 
     .subtitle-div {
-        height: 30px;
+        height: 20px;
     }
 
     .project-subtitle {
