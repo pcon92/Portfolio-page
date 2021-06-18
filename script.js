@@ -60,7 +60,7 @@ gsap.to("#click-a-side-tip",
 
 gsap.from(".left, .top, .right, .bottom, .front, .back", 
 {scrollTrigger: 
-    {trigger: "#project-section-div", start: "top center"}, 
+    {trigger: "#project-section-div", start: "top center", once: true}, 
     translateZ: "200",
     rotateZ: "180",
     backgroundImage: "none",
