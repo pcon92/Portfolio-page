@@ -33,7 +33,7 @@
     width: 100%;
     height: 300vh;
     margin: 0;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 .body {
