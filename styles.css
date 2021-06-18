@@ -210,7 +210,7 @@ body {
         align-items: center;
         opacity: 0.5;
         visibility: hidden;
-
+        user-select: none;
     }
 
     .turn:hover {
