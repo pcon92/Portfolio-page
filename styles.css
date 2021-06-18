@@ -22,7 +22,7 @@
 /* Main */
 
 html {
-    overscroll-behavior-y: contain;
+    overscroll-behavior: none;
 }
 
 :focus { /* to fix the blue highlight around turn arrows on chrome android*/
@@ -33,6 +33,7 @@ body {
     height: 300vh;
     background-color: var(--off-white);
     width: 100vw/vh;
+    overscroll-behavior: none;
 }
 
 .page-div {
