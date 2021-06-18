@@ -50,6 +50,23 @@ gsap.to("#animated-nav-bar",
 {scrollTrigger: 
     {trigger: "#animated-nav-bar", start: "top 8px", end: "+=500%", scrub: true, pin: "#animated-nav-bar", overflow:"hidden"},  
     zIndex: 100});
+
+gsap.to("#click-a-side-tip", 
+{scrollTrigger: 
+    {trigger: ".project-cube", start: "top center"},  
+    opacity: 1,
+    duration: 3
+});
+
+gsap.from(".left, .top, .right, .bottom, .front, .back", 
+{scrollTrigger: 
+    {trigger: "#project-section-div", start: "top center"}, 
+    translateZ: "200",
+    rotateZ: "180",
+    backgroundImage: "none",
+    backgroundColor: "black",
+    duration: 1
+});
     
 gsap.from("#color-circle-2", 
 {scrollTrigger: 

@@ -279,6 +279,7 @@ body {
         #click-a-side-tip {
             font-size: 1rem;
             color: white;
+            opacity: 0;
         }
 
         .info-div {
