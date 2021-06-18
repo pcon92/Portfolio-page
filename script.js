@@ -34,7 +34,7 @@ gsap.to(".title-letter", {transform: "translateX(10px)",
     yoyo: true});
 
 ScrollTrigger.config({
-    autoRefreshEvents: "visibilitychange, DOMContentLoaded, load" // no resize to prevent refresh on chrome android
+    autoRefreshEvents: "visibilitychange" // no resize to prevent refresh on chrome android
 });
 
 
