@@ -519,6 +519,14 @@ body {
         font-size: 2.5rem;
     }
 
+    .github-link, .youtube-link {
+        margin-right: 10px;
+    }
+
+    .github-link:hover, .youtube-link:hover {
+        margin-right: 10px;
+    }
+
 }
 
 @media (min-width: 20rem) { /* 320 pixels */
@@ -638,6 +646,14 @@ body {
     #title-contact-me {
         font-size: 3rem;
         margin: 2.5rem;
+    }
+
+    .github-link, .youtube-link {
+        margin-right: 20px;
+    }
+
+    .github-link:hover, .youtube-link:hover {
+        margin-right: 20px;
     }
 
 }
@@ -762,6 +778,14 @@ body {
         margin: 2.5rem;
     }
 
+    .github-link, .youtube-link {
+        margin-right: 50px;
+    }
+
+    .github-link:hover, .youtube-link:hover {
+        margin-right: 50px;
+    }
+
 }
 
 @media (min-width: 60rem) { /* 960 pixels */
@@ -877,6 +901,14 @@ body {
 
     #title-contact-me {
         font-size: 5rem;
+    }
+
+    .github-link, .youtube-link {
+        margin-right: 50px;
+    }
+
+    .github-link:hover, .youtube-link:hover {
+        margin-right: 50px;
     }
 
 }
