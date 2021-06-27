@@ -300,12 +300,14 @@ body {
                 text-align: justify;
             }
 
-            .github-link {
+            .github-link, .youtube-link {
                 color: white;
+                margin-right: 50px;
             }
 
-            .github-link:hover {
+            .github-link:hover, .youtube-link:hover {
                 color: red;
+                margin-right: 50px;
             }
 
 
