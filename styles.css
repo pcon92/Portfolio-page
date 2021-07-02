@@ -300,14 +300,23 @@ body {
                 text-align: justify;
             }
 
+            .links-div {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .github-link-div, .youtube-link-div, .live-link-div {
+                margin-top: -30px;
+                margin-bottom: 30px;
+            }
+
             .github-link, .youtube-link, .live-link {
                 color: white;
-                margin-right: 50px;
             }
 
             .github-link:hover, .youtube-link:hover, .live-link:hover {
                 color: red;
-                margin-right: 50px;
+                margin-bottom: 5px;
             }
 
 
@@ -519,12 +528,18 @@ body {
         font-size: 2.5rem;
     }
 
+    .github-link-div, .youtube-link-div, .live-link-div {
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+
     .github-link, .youtube-link, .live-link {
-        margin-right: 20px;
+        color: white;
     }
 
     .github-link:hover, .youtube-link:hover, .live-link:hover {
-        margin-right: 20px;
+        color: red;
+        margin-bottom: 5px;
     }
 
 }
@@ -649,12 +664,18 @@ body {
         margin: 2.5rem;
     }
 
+    .github-link-div, .youtube-link-div, .live-link-div {
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+
     .github-link, .youtube-link, .live-link {
-        margin-right: 45px;
+        color: white;
     }
 
     .github-link:hover, .youtube-link:hover, .live-link:hover {
-        margin-right: 45px;
+        color: red;
+        margin-bottom: 5px;
     }
 
 }
@@ -779,12 +800,18 @@ body {
         margin: 2.5rem;
     }
 
+    .github-link-div, .youtube-link-div, .live-link-div {
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+
     .github-link, .youtube-link, .live-link {
-        margin-right: 50px;
+        color: white;
     }
 
     .github-link:hover, .youtube-link:hover, .live-link:hover {
-        margin-right: 50px;
+        color: red;
+        margin-bottom: 5px;
     }
 
 }
@@ -904,12 +931,18 @@ body {
         font-size: 5rem;
     }
 
+    .github-link-div, .youtube-link-div, .live-link-div {
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+
     .github-link, .youtube-link, .live-link {
-        margin-right: 50px;
+        color: white;
     }
 
     .github-link:hover, .youtube-link:hover, .live-link:hover {
-        margin-right: 50px;
+        color: red;
+        margin-bottom: 5px;
     }
 
 }
