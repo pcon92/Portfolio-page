@@ -300,12 +300,12 @@ body {
                 text-align: justify;
             }
 
-            .github-link, .youtube-link {
+            .github-link, .youtube-link, .live-link {
                 color: white;
                 margin-right: 50px;
             }
 
-            .github-link:hover, .youtube-link:hover {
+            .github-link:hover, .youtube-link:hover, .live-link:hover {
                 color: red;
                 margin-right: 50px;
             }
@@ -519,12 +519,12 @@ body {
         font-size: 2.5rem;
     }
 
-    .github-link, .youtube-link {
-        margin-right: 10px;
+    .github-link, .youtube-link, .live-link {
+        margin-right: 20px;
     }
 
-    .github-link:hover, .youtube-link:hover {
-        margin-right: 10px;
+    .github-link:hover, .youtube-link:hover, .live-link:hover {
+        margin-right: 20px;
     }
 
 }
@@ -641,6 +641,7 @@ body {
     .devicon {
         font-size: 2rem;
         padding: 10px;
+        
     }
 
     #title-contact-me {
@@ -648,12 +649,12 @@ body {
         margin: 2.5rem;
     }
 
-    .github-link, .youtube-link {
-        margin-right: 20px;
+    .github-link, .youtube-link, .live-link {
+        margin-right: 45px;
     }
 
-    .github-link:hover, .youtube-link:hover {
-        margin-right: 20px;
+    .github-link:hover, .youtube-link:hover, .live-link:hover {
+        margin-right: 45px;
     }
 
 }
@@ -778,11 +779,11 @@ body {
         margin: 2.5rem;
     }
 
-    .github-link, .youtube-link {
+    .github-link, .youtube-link, .live-link {
         margin-right: 50px;
     }
 
-    .github-link:hover, .youtube-link:hover {
+    .github-link:hover, .youtube-link:hover, .live-link:hover {
         margin-right: 50px;
     }
 
@@ -903,11 +904,11 @@ body {
         font-size: 5rem;
     }
 
-    .github-link, .youtube-link {
+    .github-link, .youtube-link, .live-link {
         margin-right: 50px;
     }
 
-    .github-link:hover, .youtube-link:hover {
+    .github-link:hover, .youtube-link:hover, .live-link:hover {
         margin-right: 50px;
     }
 
