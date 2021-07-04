@@ -141,31 +141,31 @@ function letterGoBack() {
 
 TITLE_LETTERS[0].addEventListener('mouseover', () => {
     TITLE_LETTERS[0].style.transition = "transform 0.1s ease-out"; 
-    TITLE_LETTERS[0].style.transform = `translateX(${(mouseDir[2]/10)*mouseDir[0]}px) translateY(${(mouseDir[3]/20)*mouseDir[1]}px)`;
+    TITLE_LETTERS[0].style.transform = `translateX(${(mouseDir[2]/8)*mouseDir[0]}px) translateY(${(mouseDir[3]/15)*mouseDir[1]}px)`;
     setTimeout(letterGoBack, 300);
 })
 
 TITLE_LETTERS[1].addEventListener('mouseover', () => {
     TITLE_LETTERS[1].style.transition = "transform 0.1s ease-out"; 
-    TITLE_LETTERS[1].style.transform = `translateX(${(mouseDir[2]/10)*mouseDir[0]}px) translateY(${(mouseDir[3]/20)*mouseDir[1]}px)`;
+    TITLE_LETTERS[1].style.transform = `translateX(${(mouseDir[2]/8)*mouseDir[0]}px) translateY(${(mouseDir[3]/15)*mouseDir[1]}px)`;
     setTimeout(letterGoBack, 300);
 })
 
 TITLE_LETTERS[2].addEventListener('mouseover', () => {
     TITLE_LETTERS[2].style.transition = "transform 0.1s ease-out"; 
-    TITLE_LETTERS[2].style.transform = `translateX(${(mouseDir[2]/10)*mouseDir[0]}px) translateY(${(mouseDir[3]/20)*mouseDir[1]}px)`;
+    TITLE_LETTERS[2].style.transform = `translateX(${(mouseDir[2]/8)*mouseDir[0]}px) translateY(${(mouseDir[3]/15)*mouseDir[1]}px)`;
     setTimeout(letterGoBack, 300);
 })
 
 TITLE_LETTERS[3].addEventListener('mouseover', () => {
     TITLE_LETTERS[3].style.transition = "transform 0.1s ease-out"; 
-    TITLE_LETTERS[3].style.transform = `translateX(${(mouseDir[2]/10)*mouseDir[0]}px) translateY(${(mouseDir[3]/20)*mouseDir[1]}px)`;
+    TITLE_LETTERS[3].style.transform = `translateX(${(mouseDir[2]/8)*mouseDir[0]}px) translateY(${(mouseDir[3]/15)*mouseDir[1]}px)`;
     setTimeout(letterGoBack, 300);
 })
 
 TITLE_LETTERS[4].addEventListener('mouseover', () => {
     TITLE_LETTERS[4].style.transition = "transform 0.1s ease-out"; 
-    TITLE_LETTERS[4].style.transform = `translateX(${(mouseDir[2]/10)*mouseDir[0]}px) translateY(${(mouseDir[3]/20)*mouseDir[1]}px)`;
+    TITLE_LETTERS[4].style.transform = `translateX(${(mouseDir[2]/8)*mouseDir[0]}px) translateY(${(mouseDir[3]/15)*mouseDir[1]}px)`;
     setTimeout(letterGoBack, 300);
 })
 

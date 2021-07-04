@@ -19,18 +19,21 @@
     --project-title-text-shadow: 1px -1px 1px teal, -1px 1px 1px red;
     --subtitle-text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.6);
     --project-cube-container-background: rgba(255, 255, 255, 0.3);
+    --transition-for-theme: 2s;
 }
 
 
 /* Main */
 
 :focus { /* to fix the blue highlight around turn arrows on chrome android*/
-    outline: none !important
+    outline: none !important;
+
 }
 
 body {
     height: 300vh;
     background-color: var(--off-white);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .page-div {
@@ -45,6 +48,7 @@ body {
     background-color: var(--dark-grey);
     color: var(--off-white);
     overflow: hidden;
+    transition-duration: var(--transition-for-theme);
 }
 
     #intro-page-content {
@@ -120,6 +124,7 @@ body {
 
 #project-cube-page {
     background-color: var(--dark-grey);
+    transition-duration: var(--transition-for-theme);
 }
 
     /* For project cube */
@@ -329,6 +334,7 @@ body {
     align-items: center;
     overflow: hidden;
     background-color: var(--dark-grey);
+    transition-duration: var(--transition-for-theme);
 }
 
     #dev-icon-and-circle-div {
