@@ -14,6 +14,20 @@ function randomColorGenerator() {
     document.getElementById("color-circle-2").style.backgroundColor = randomColor;
 }
 
+let theme = 'dark';
+
+function changeTheme() {
+    if (theme === 'dark') {
+        document.documentElement.style.setProperty('--off-white', 'rgb(25, 25, 25)')
+        document.documentElement.style.setProperty('--dark-grey', 'rgb(238, 238, 238)')
+        theme = 'light';
+    } else {
+        document.documentElement.style.setProperty('--off-white', 'rgb(238, 238, 238)')
+        document.documentElement.style.setProperty('--dark-grey', 'rgb(25, 25, 25)')
+        theme = 'dark'
+    }
+}
+
 
 // GSAP animations //
 

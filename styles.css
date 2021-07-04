@@ -16,6 +16,9 @@
     --font: 'Dosis', sans-serif;
     --font-2: 'Montserrat', sans-serif;
     --title-text-shadow: 2px -2px 1px teal, -2px 2px 1px red;
+    --project-title-text-shadow: 1px -1px 1px teal, -1px 1px 1px red;
+    --subtitle-text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.6);
+    --project-cube-container-background: rgba(255, 255, 255, 0.3);
 }
 
 
@@ -40,7 +43,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--dark-grey);
-    color: white;
+    color: var(--off-white);
     overflow: hidden;
 }
 
@@ -87,7 +90,7 @@ body {
             width: 15rem;
             margin-bottom: 2rem;
             font-family: var(--font-2);
-            text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.6);
+            text-shadow: var(--subtitle-text-shadow);
         }
 
         #animated-nav-bar {
@@ -104,7 +107,7 @@ body {
 
             .nav-link {
                 text-decoration: none;
-                color: white;
+                color: var(--off-white);
                 padding: 0.5rem;
                 font-size: .9rem;
                 font-family: var(--font-2);
@@ -137,8 +140,8 @@ body {
         justify-content: center;
         align-items: center;
         position: relative;
-        box-shadow: 0px 0px 200px 10px white;
-        background-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0px 0px 200px 10px var(--off-white);
+        background-color: var(--project-cube-container-background);
     }
 
     .project-cube-container-middle-div {
@@ -207,7 +210,7 @@ body {
     .turn {
         height: inherit;
         width: 100%;
-        color: white;
+        color: var(--off-white);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -247,7 +250,7 @@ body {
             display: flex;
             align-items: flex-end;
             justify-content: center;
-            color: white;
+            color: var(--off-white);
         }
 
             .project-title {
@@ -256,6 +259,7 @@ body {
                 position: absolute;
                 opacity: 0;
                 transition: opacity 1.5s;
+                text-shadow: var(--project-title-text-shadow);
             }
 
         .subtitle-div {
@@ -265,7 +269,7 @@ body {
             display: flex;
             align-items: flex-end;
             justify-content: center;
-            color: white;
+            color: var(--off-white);
             }
     
             .project-subtitle {
@@ -277,7 +281,7 @@ body {
 
         #click-a-side-tip {
             font-size: 1rem;
-            color: white;
+            color: var(--off-white);
             opacity: 0;
         }
 
@@ -290,7 +294,7 @@ body {
             .project-info {
                 font-size: 1rem;
                 position: absolute;
-                color: white;
+                color: var(--off-white);
                 width: inherit;
                 padding: 1rem;
                 opacity: 0;
@@ -309,7 +313,7 @@ body {
             }
 
             .github-link, .youtube-link, .live-link {
-                color: white;
+                color: var(--off-white);
             }
 
             .github-link:hover, .youtube-link:hover, .live-link:hover {
@@ -370,7 +374,7 @@ body {
 
     #color-circle-2 {
         border-radius: 50%;
-        border: 3px solid white;
+        border: 3px solid var(--off-white);
         height: 20rem;
         width: 20rem;
         background-color: var(--off-white);
@@ -380,7 +384,7 @@ body {
         font-size: 6rem;
         font-family: var(--font);
         margin: 2.5rem;
-        color: white;
+        color: var(--off-white);
         text-shadow: var(--title-text-shadow);
     }
         
@@ -392,7 +396,7 @@ body {
     }
 
     .contact-me-links {
-        color: white;
+        color: var(--off-white);
     }
 
     i:hover {
@@ -400,8 +404,9 @@ body {
         cursor: pointer;
     }
 
-
-
+    #color-circle:hover, #color-circle-2:hover {
+        cursor: pointer;
+    } 
 
 
 /* Media queries */
@@ -538,7 +543,7 @@ body {
     }
 
     .github-link, .youtube-link, .live-link {
-        color: white;
+        color: var(--off-white);
     }
 
     .github-link:hover, .youtube-link:hover, .live-link:hover {
@@ -679,10 +684,6 @@ body {
         width: 10rem;
     }
 
-    .github-link, .youtube-link, .live-link {
-        color: white;
-    }
-
     .github-link:hover, .youtube-link:hover, .live-link:hover {
         color: red;
         margin-bottom: 5px;
@@ -821,10 +822,6 @@ body {
         width: 15rem;
     }
 
-    .github-link, .youtube-link, .live-link {
-        color: white;
-    }
-
     .github-link:hover, .youtube-link:hover, .live-link:hover {
         color: red;
         margin-bottom: 5px;
@@ -956,10 +953,6 @@ body {
     #contact-me-list {
         font-size: 1rem;
         width: 15rem;
-    }
-
-    .github-link, .youtube-link, .live-link {
-        color: white;
     }
 
     .github-link:hover, .youtube-link:hover, .live-link:hover {
