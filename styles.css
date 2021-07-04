@@ -28,7 +28,6 @@
 body {
     height: 300vh;
     background-color: var(--off-white);
-
 }
 
 .page-div {
@@ -161,7 +160,7 @@ body {
         position: absolute;
         width: 100%;
         height: 100%;
-        border: 30px ridge var(--light-grey);
+        border: 7px ridge var(--light-grey);
     }
 
     .face:hover {
@@ -284,7 +283,7 @@ body {
 
         .info-div {
             height: 20rem;
-            width: 40rem;
+            width: 50rem;
             border-radius: 0.5rem;
         }
 
@@ -303,11 +302,10 @@ body {
             .links-div {
                 display: flex;
                 flex-direction: column;
-            }
-
-            .github-link-div, .youtube-link-div, .live-link-div {
-                margin-top: -30px;
-                margin-bottom: 30px;
+                justify-content: space-between;
+                margin-top: -50px;
+                margin-bottom: 50px;
+                height: 80px;
             }
 
             .github-link, .youtube-link, .live-link {
@@ -442,7 +440,7 @@ body {
     }
 
     .face {
-        border: 12px ridge var(--light-grey);
+        border: 5px ridge var(--light-grey);
     }
 
     .back {
@@ -496,7 +494,7 @@ body {
     }
         
     .project-info {
-        font-size: 0.6rem;
+        font-size: 0.55rem;
         padding: 1rem;
     }
 
@@ -528,9 +526,15 @@ body {
         font-size: 2.5rem;
     }
 
-    .github-link-div, .youtube-link-div, .live-link-div {
+    .links-div {
         margin-top: -30px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+        height: 50px;
+    }
+
+    #contact-me-list {
+        font-size: 0.6rem;
+        width: 10rem;
     }
 
     .github-link, .youtube-link, .live-link {
@@ -577,7 +581,7 @@ body {
     }
 
     .face {
-        border: 10px ridge var(--light-grey);
+        border: 5px ridge var(--light-grey);
     }
 
     .back {
@@ -631,7 +635,7 @@ body {
     }
         
     .project-info {
-        font-size: 0.6rem;
+        font-size: 0.55rem;
         padding: 1rem;
     }
 
@@ -664,9 +668,15 @@ body {
         margin: 2.5rem;
     }
 
-    .github-link-div, .youtube-link-div, .live-link-div {
-        margin-top: -30px;
-        margin-bottom: 30px;
+    .links-div {
+        margin-top: -40px;
+        margin-bottom: 15px;
+        height: 50px;
+    }
+
+    #contact-me-list {
+        font-size: 0.6rem;
+        width: 10rem;
     }
 
     .github-link, .youtube-link, .live-link {
@@ -714,7 +724,7 @@ body {
     }
 
     .face {
-        border: 15px ridge var(--light-grey);
+        border: 7px ridge var(--light-grey);
     }
 
     .back {
@@ -800,9 +810,15 @@ body {
         margin: 2.5rem;
     }
 
-    .github-link-div, .youtube-link-div, .live-link-div {
-        margin-top: -30px;
-        margin-bottom: 30px;
+    .links-div {
+        margin-top: -50px;
+        margin-bottom: 20px;
+        height: 70px;
+    }
+
+    #contact-me-list {
+        font-size: 1rem;
+        width: 15rem;
     }
 
     .github-link, .youtube-link, .live-link {
@@ -850,7 +866,7 @@ body {
     }
 
     .face {
-        border: 15px groove var(--light-grey);
+        border: 7px groove var(--light-grey);
     }
     
     .back {
@@ -931,9 +947,15 @@ body {
         font-size: 5rem;
     }
 
-    .github-link-div, .youtube-link-div, .live-link-div {
-        margin-top: -30px;
+    .links-div {
+        margin-top: -50px;
         margin-bottom: 30px;
+        height: 80px;
+    }
+
+    #contact-me-list {
+        font-size: 1rem;
+        width: 15rem;
     }
 
     .github-link, .youtube-link, .live-link {
