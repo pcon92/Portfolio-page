@@ -33,6 +33,13 @@ function changeTheme() {
 
 gsap.to("#color-circle", {duration: 1, repeat: -1, onRepeat: randomColorGenerator});
 
+gsap.to("#color-circle, #color-circle-2", {duration: 2, 
+    repeat: -1, 
+    boxShadow: '0px 0px 10px 10px rgba(255, 255, 255, 0.5)', 
+    yoyo: true,
+    ease: 'power1.in',
+    delay: 1});
+
 gsap.from("#color-circle", {opacity: 0, scale: 0.1, duration: 1.5});
 
 gsap.from("#subtitle", {opacity: 0, duration: 1.5, ease: "power3.in"});
