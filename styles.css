@@ -352,7 +352,6 @@ body {
         align-items: center;
         width: 200px;
         height: 600px;
-
     }
 
     .devicon {
@@ -377,6 +376,30 @@ body {
         box-shadow: 0px 0px 100px 5px var(--off-white);
         transition: box-shadow 0.5s;
     }
+
+    .skill-bar-div {
+        height: 10px;
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 35px;
+    }
+
+    .skill-bar-circle {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        border: 1px solid var(--off-white);
+    }
+
+    .filled {
+        background-color: var(--off-white);
+    }
+
+    .blank {
+        background-color: var(--dark-grey);
+    }
+
 
     #color-circle-2 {
         border-radius: 50%;
@@ -533,6 +556,17 @@ body {
         padding: 10px;
     }
 
+    .skill-bar-div {
+        height: 10px;
+        width: 40px;
+        margin-top: 15px;
+    }
+
+    .skill-bar-circle {
+        height: 5px;
+        width: 5px;
+    }
+
     #title-contact-me {
         font-size: 2.5rem;
     }
@@ -671,7 +705,17 @@ body {
     .devicon {
         font-size: 2rem;
         padding: 10px;
-        
+    }
+
+    .skill-bar-div {
+        height: 10px;
+        width: 50px;
+        margin-top: 20px;
+    }
+
+    .skill-bar-circle {
+        height: 5px;
+        width: 5px;
     }
 
     #title-contact-me {
@@ -804,12 +848,23 @@ body {
 
     .dev-icons-div {
         width: 200px;
-        height: 500px;
+        height: 600px;
     }
     
     .devicon {
         font-size: 5rem;
         padding: 20px;
+    }
+
+    .skill-bar-div {
+        height: 10px;
+        width: 120px;
+        margin-top: 35px;
+    }
+
+    .skill-bar-circle {
+        height: 10px;
+        width: 10px;
     }
 
     #title-contact-me {
@@ -944,6 +999,17 @@ body {
     .devicon {
         font-size: 5rem;
         padding: 20px;
+    }
+
+    .skill-bar-div {
+        height: 10px;
+        width: 120px;
+        margin-top: 35px;
+    }
+
+    .skill-bar-circle {
+        height: 10px;
+        width: 10px;
     }
 
     #title-contact-me {
