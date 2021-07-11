@@ -12,6 +12,7 @@ function randomColorGenerator() {
     let randomColor = `rgba(${rgb1}, ${rgb2}, ${rgb3}, ${alpha})`;
     document.getElementById("color-circle").style.backgroundColor = randomColor;
     document.getElementById("color-circle-2").style.backgroundColor = randomColor;
+    document.getElementById("color-circle-3").style.backgroundColor = randomColor;
 }
 
 let theme = 'dark';
@@ -72,11 +73,20 @@ gsap.to("#animated-nav-bar",
     {trigger: "#animated-nav-bar", start: "top 8px", end: "+=500%", scrub: true, pin: "#animated-nav-bar", overflow:"hidden"},  
     zIndex: 100});
 
+gsap.to("#color-circle-3", 
+    {scrollTrigger: 
+        {trigger: "#click-a-side-tip", start: "top bottom", end: "+=80%", scrub: true, pin: "#color-circle-3"}, 
+        opacity: 1,
+        right: "10px",
+        top: "10px",
+    });
+
 gsap.to("#click-a-side-tip", 
 {scrollTrigger: 
     {trigger: ".project-cube", start: "top center"},  
     opacity: 1,
-    duration: 3
+    duration: 3,
+    ease: 'power4.in'
 });
 
 gsap.from(".left, .top, .right, .bottom, .front, .back", 
