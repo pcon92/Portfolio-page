@@ -75,11 +75,24 @@ gsap.to("#animated-nav-bar",
 
 gsap.to("#color-circle-3", 
     {scrollTrigger: 
-        {trigger: "#click-a-side-tip", start: "top bottom", end: "+=80%", scrub: true, pin: "#color-circle-3"}, 
-        opacity: 1,
+        {trigger: "#title-name-div", start: "top top", end: "+=50%", scrub: true}, 
+        scale: 1,
+    });
+
+gsap.to("#color-circle-3", 
+    {scrollTrigger: 
+        {trigger: "#click-a-side-tip", start: "top bottom+=20%", end: "+=1000%", scrub: true, pin: "#color-circle-3"}, 
         right: "10px",
         top: "10px",
+        visibility: 'visible',
     });
+
+gsap.to("#color-circle-3", 
+    {scrollTrigger: 
+        {trigger: "#last-page-div", start: "top center", end: "+=50%", scrub: true}, 
+        scale: 0,
+    });
+
 
 gsap.to("#click-a-side-tip", 
 {scrollTrigger: 
