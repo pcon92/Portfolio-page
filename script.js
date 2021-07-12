@@ -119,6 +119,15 @@ gsap.from("#color-circle-2",
         {trigger: "#project-section-div", start: "top", end: "+=100%", scrub: true, overflow:"hidden"},  
         x: `-=${circleLeftDist}`});
 
+gsap.to(".skill-bar-div", 
+    {scrollTrigger: 
+        {trigger: "#title-contact-me", start: "top bottom"},  
+        opacity: 1,
+        duration: 2,
+        ease: 'power4.in',
+        stagger: 0.5
+    });
+
 const TITLE_NAME_DIV = document.getElementById("title-name-div");
 
 // for moving title letters
