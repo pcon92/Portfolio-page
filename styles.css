@@ -451,8 +451,9 @@ body {
         position: absolute;
         top: 10px;
         right: 10px;
-        visibility: hidden;
         transform: scale(0);
+        visibility: hidden;
+        opacity: 0;
         transition-property: background-color;
         transition-duration: var(--transition-for-circles);
     }
